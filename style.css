@@ -1,0 +1,55 @@
+body{
+margin:0;
+font-family:Segoe UI,Arial,sans-serif;
+background:#0B1B3A;
+color:#E5E7EB;
+}
+
+nav{
+background:#0B1B3A;
+padding:15px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:15px;
+}
+
+nav a.active{
+color:#C81E3A;
+}
+
+.logo{
+font-weight:bold;
+}
+
+.hero{
+padding:150px 20px;
+text-align:center;
+background:linear-gradient(135deg,#0B1B3A,#162a56,#C81E3A);
+}
+
+section{
+padding:80px 20px;
+max-width:1000px;
+margin:auto;
+}
+
+.card{
+background:#111827;
+padding:30px;
+border-radius:10px;
+margin-bottom:20px;
+}
+
+.btn{
+background:#C81E3A;
+padding:10px 20px;
+color:white;
+text-decoration:none;
+border-radius:25px;
+}

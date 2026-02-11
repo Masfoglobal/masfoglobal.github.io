@@ -19,17 +19,41 @@ color:#E5E7EB;
 line-height:1.6;
 }
 
+/* NAVIGATION */
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:#0B1B3A;
+padding:15px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+margin-left:20px;
+font-weight:500;
+}
+
+nav a:hover{
+color:#C81E3A;
+}
+
+/* HEADER */
 header{
 background:#ffffff;
-padding:70px 20px;
+padding:140px 20px 80px 20px;
 text-align:center;
 }
 
 header img{
 max-width:220px;
 margin-bottom:20px;
-box-shadow:0 10px 25px rgba(0,0,0,0.1);
-border-radius:8px;
 }
 
 header h1{
@@ -53,21 +77,16 @@ font-weight:bold;
 margin-top:12px;
 }
 
+/* SECTIONS */
 section{
-padding:60px 20px;
+padding:80px 20px;
 max-width:1100px;
 margin:auto;
 }
 
 h2{
 color:#ffffff;
-font-size:26px;
-margin-bottom:20px;
-}
-
-h3{
-color:#ffffff;
-margin-top:0;
+margin-bottom:25px;
 }
 
 .card{
@@ -79,7 +98,7 @@ transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-5px);
+transform:translateY(-6px);
 }
 
 .grid{
@@ -88,6 +107,7 @@ grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:20px;
 }
 
+/* FOOTER */
 footer{
 background:#020617;
 padding:30px 20px;
@@ -95,25 +115,56 @@ text-align:center;
 color:#94a3b8;
 }
 
-a{
-color:#C81E3A;
+/* WHATSAPP BUTTON */
+.whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+color:white;
+padding:15px 18px;
+border-radius:50px;
+font-size:20px;
 text-decoration:none;
+box-shadow:0 8px 20px rgba(0,0,0,0.4);
+}
+
+.whatsapp:hover{
+background:#1ebe5d;
 }
 
 @media(max-width:768px){
-header h1{
-font-size:24px;
+nav{
+padding:15px 20px;
+}
+nav a{
+margin-left:10px;
+font-size:14px;
+}
+header{
+padding-top:160px;
 }
 }
 
 </style>
-
 </head>
 
 <body>
 
+<!-- NAVIGATION -->
+<nav>
+<div style="color:#fff;font-weight:bold;">MASFO</div>
+<div>
+<a href="#overview">Overview</a>
+<a href="#vision">Vision</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<!-- HEADER -->
 <header>
-  <img src="logo.jpg" alt="Masfo Global Connect Ltd Logo">
+  <img src="logo.jpg" alt="Masfo Logo">
   <h1>MASFO GLOBAL CONNECT LTD</h1>
   <p><strong>Global Technology & Innovation Company</strong></p>
   <p class="badge">RC Number: 8158126</p>
@@ -122,163 +173,50 @@ font-size:24px;
   </p>
 </header>
 
-<section>
+<section id="overview">
 <h2>Company Overview</h2>
 <div class="card">
 <p>
 Masfo Global Connect Ltd is a global technology and innovation company focused on developing
-advanced digital solutions, emerging technologies, and intelligent systems that support
-economic growth, smart agriculture, and cross-border digital commerce.
-</p>
-<p>
-The Company is committed to empowering individuals, businesses, and institutions through
-innovative technology, strategic partnerships, and scalable digital infrastructure designed
-for African and global markets.
+advanced digital solutions and intelligent systems supporting economic growth.
 </p>
 </div>
 </section>
 
-<section>
+<section id="vision">
 <h2>Vision</h2>
 <div class="card">
 <p>
-To become a leading African technology and innovation company building intelligent digital
-solutions and sustainable systems that connect local opportunities to global markets.
+To become a leading African technology and innovation company building intelligent digital solutions.
 </p>
 </div>
 </section>
 
-<section>
-<h2>Mission</h2>
-<div class="card">
-<p>
-To deliver innovative, technology-driven solutions in artificial intelligence, software
-systems, blockchain infrastructure, smart agriculture, and digital trade while enabling
-capacity development, economic inclusion, and long-term value creation.
-</p>
-</div>
-</section>
-
-<section>
-<h2>Core Values</h2>
-<div class="grid">
-<div class="card">Innovation</div>
-<div class="card">Integrity</div>
-<div class="card">Excellence</div>
-<div class="card">Trust</div>
-<div class="card">Collaboration</div>
-<div class="card">Sustainability</div>
-</div>
-</section>
-
-<section>
-<h2>Our Strategic Technology Units</h2>
-
-<div class="card">
-<h3>Masfo AI & Technology</h3>
-<ul>
-<li>Software and web application development</li>
-<li>Artificial intelligence solutions</li>
-<li>Automation systems</li>
-<li>Digital platforms and enterprise tools</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Masfo Blockchain Lab</h3>
-<ul>
-<li>Blockchain solutions and advisory</li>
-<li>Smart contract systems</li>
-<li>Digital trust infrastructure</li>
-<li>Web3 innovation research</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Masfo AgriTech</h3>
-<ul>
-<li>Smart farming technologies</li>
-<li>Agri-data and productivity systems</li>
-<li>Technology-driven agricultural solutions</li>
-<li>Sustainable food production support</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Masfo Global Trade</h3>
-<ul>
-<li>Cross-border business support</li>
-<li>Digital commerce enablement</li>
-<li>Sourcing and distribution partnerships</li>
-<li>Market access solutions</li>
-</ul>
-</div>
-
-</section>
-
-<section>
+<section id="services">
 <h2>Services & Solutions</h2>
-<div class="card">
-<ul>
-<li>Technology consulting and system design</li>
-<li>Software and platform development</li>
-<li>AI-enabled business solutions</li>
-<li>Digital transformation support</li>
-<li>Capacity building and technology training</li>
-<li>Innovation and research partnerships</li>
-</ul>
-</div>
-</section>
-
-<section>
-<h2>Business Model</h2>
-<div class="card">
-<p>
-The Company operates a hybrid model combining technology services, consulting,
-digital product development, training and capacity building, and strategic partnerships.
-</p>
-</div>
-</section>
-
-<section>
-<h2>Target Market</h2>
 <div class="grid">
-<div class="card">Startups & SMEs</div>
-<div class="card">Government Institutions</div>
-<div class="card">Development Organizations</div>
-<div class="card">Agricultural Sector Stakeholders</div>
-<div class="card">International Technology & Investment Partners</div>
+<div class="card">AI & Software Development</div>
+<div class="card">Blockchain Infrastructure</div>
+<div class="card">Smart Agriculture</div>
+<div class="card">Global Digital Trade</div>
 </div>
 </section>
 
-<section>
-<h2>Leadership</h2>
-<div class="card">
-<h3>Abdulrahman Ali</h3>
-<p>Founder & Chief Executive Officer (CEO)</p>
-<p>
-Provides strategic direction for the Company’s innovation, technology development,
-and global partnership initiatives.
-</p>
-</div>
-</section>
-
-<section>
+<section id="contact">
 <h2>Contact Information</h2>
 <div class="card">
-<p><strong>Address:</strong><br>
-No. 10, Dr Muh’d Plaza, Opp. Maiduguri Stadium,<br>
-Maiduguri, Borno State, Nigeria
-</p>
 <p><strong>Phone:</strong> +234 9077 951 355</p>
-<p><strong>Email:</strong>
-<a href="mailto:info@masfoglobal.com">info@masfoglobal.com</a></p>
+<p><strong>Email:</strong> info@masfoglobal.com</p>
+<p><strong>Location:</strong> Maiduguri, Nigeria</p>
 </div>
 </section>
 
 <footer>
 © 2026 Masfo Global Connect Ltd. All rights reserved.
 </footer>
+
+<!-- WHATSAPP -->
+<a class="whatsapp" href="https://wa.me/2349077951355" target="_blank">💬</a>
 
 </body>
 </html>

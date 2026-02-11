@@ -31,13 +31,21 @@ justify-content:space-between;
 align-items:center;
 box-shadow:0 2px 15px rgba(0,0,0,0.05);
 z-index:1000;
+transition:0.3s ease;
 }
+
+nav.scrolled{
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
+padding:14px 40px;
+}
+
 nav a{
 text-decoration:none;
 color:#111;
 margin-left:20px;
 font-size:14px;
 font-weight:500;
+transition:0.3s ease;
 }
 nav a:hover{color:#C81E3A;}
 
@@ -51,6 +59,7 @@ header h1{
 font-size:42px;
 max-width:900px;
 margin:auto;
+letter-spacing:-1px;
 }
 header p{
 margin-top:20px;
@@ -76,6 +85,7 @@ border-radius:40px;
 text-decoration:none;
 font-weight:bold;
 margin-right:15px;
+transition:all 0.3s ease;
 }
 
 .btn-primary{
@@ -88,16 +98,36 @@ border:2px solid #C81E3A;
 color:#C81E3A;
 }
 
+.btn:hover{
+transform:translateY(-4px);
+box-shadow:0 10px 25px rgba(200,30,58,0.25);
+}
+
+.btn-outline:hover{
+background:#C81E3A;
+color:white;
+}
+
+/* SECTION */
 section{
 padding:100px 20px;
 max-width:1100px;
 margin:auto;
+opacity:0;
+transform:translateY(40px);
+transition:all 0.8s ease;
+}
+
+section.visible{
+opacity:1;
+transform:translateY(0);
 }
 
 h2{
 text-align:center;
 margin-bottom:40px;
 font-size:30px;
+letter-spacing:-0.5px;
 }
 
 .card{
@@ -106,6 +136,12 @@ padding:40px;
 border-radius:16px;
 box-shadow:0 10px 25px rgba(0,0,0,0.05);
 margin-bottom:30px;
+transition:all 0.4s ease;
+}
+
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 15px 35px rgba(0,0,0,0.08);
 }
 
 .grid{
@@ -166,11 +202,12 @@ box-shadow:0 8px 20px rgba(0,0,0,0.2);
 <a href="company-profile.pdf" class="btn btn-outline">Download Company Profile</a>
 </header>
 
+<!-- ALL YOUR ORIGINAL SECTIONS REMAIN EXACTLY THE SAME -->
+
 <section id="overview">
 <h2>Company Overview</h2>
 <div class="card">
 <p>Masfo Global Connect Ltd is a global technology and innovation company focused on developing advanced digital solutions, emerging technologies, and intelligent systems that support economic growth, smart agriculture, and cross-border digital commerce.</p>
-
 <p>The Company is committed to empowering individuals, businesses, and institutions through innovative technology, strategic partnerships, and scalable digital infrastructure designed for African and global markets.</p>
 </div>
 </section>
@@ -320,10 +357,32 @@ Email: info@masfoglobal.com
 </section>
 
 <footer>
-© 2026 Masfo Global Connect Ltd. All rights reserved.
+©️ 2026 Masfo Global Connect Ltd. All rights reserved.
 </footer>
 
 <a class="whatsapp" href="https://wa.me/2349077951355" target="_blank">Chat</a>
+
+<script>
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+sections.forEach(section => {
+const rect = section.getBoundingClientRect();
+if(rect.top < window.innerHeight - 100){
+section.classList.add("visible");
+}
+});
+});
+
+window.addEventListener("scroll", function(){
+const nav = document.querySelector("nav");
+if(window.scrollY > 50){
+nav.classList.add("scrolled");
+}else{
+nav.classList.remove("scrolled");
+}
+});
+</script>
 
 </body>
 </html>

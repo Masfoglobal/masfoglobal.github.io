@@ -3,20 +3,36 @@ margin:0;
 font-family:Segoe UI,Arial,sans-serif;
 background:#0B1B3A;
 color:#E5E7EB;
+line-height:1.7;
 }
 
+/* NAV */
 nav{
 background:#0B1B3A;
 padding:15px 40px;
 display:flex;
 justify-content:space-between;
 align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+transition:all 0.3s ease;
+}
+
+nav.scrolled{
+box-shadow:0 8px 25px rgba(0,0,0,0.4);
+padding:12px 40px;
 }
 
 nav a{
 color:white;
 text-decoration:none;
 margin-left:15px;
+transition:0.3s ease;
+}
+
+nav a:hover{
+color:#C81E3A;
 }
 
 nav a.active{
@@ -25,31 +41,82 @@ color:#C81E3A;
 
 .logo{
 font-weight:bold;
+letter-spacing:1px;
 }
 
+/* HERO */
 .hero{
-padding:150px 20px;
+padding:170px 20px;
 text-align:center;
 background:linear-gradient(135deg,#0B1B3A,#162a56,#C81E3A);
 }
 
-section{
-padding:80px 20px;
-max-width:1000px;
-margin:auto;
+.hero h1{
+letter-spacing:-1px;
 }
 
+.hero p{
+font-size:18px;
+opacity:0.9;
+}
+
+/* SECTIONS */
+section{
+padding:100px 20px;
+max-width:1000px;
+margin:auto;
+opacity:0;
+transform:translateY(40px);
+transition:all 0.8s ease;
+}
+
+/* Reveal effect */
+section.visible{
+opacity:1;
+transform:translateY(0);
+}
+
+/* Alternate background subtle */
+section:nth-child(even){
+background:#0f1f3d;
+}
+
+/* CARD */
 .card{
 background:#111827;
 padding:30px;
-border-radius:10px;
-margin-bottom:20px;
+border-radius:14px;
+margin-bottom:25px;
+transition:all 0.4s ease;
 }
 
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 35px rgba(0,0,0,0.4);
+}
+
+/* BUTTON */
 .btn{
 background:#C81E3A;
-padding:10px 20px;
+padding:12px 24px;
 color:white;
 text-decoration:none;
-border-radius:25px;
+border-radius:30px;
+display:inline-block;
+transition:all 0.3s ease;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 8px 20px rgba(200,30,58,0.4);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+.hero{
+padding:130px 20px;
+}
+section{
+padding:70px 20px;
+}
 }

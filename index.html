@@ -11,97 +11,80 @@
 
 <style>
 html{scroll-behavior:smooth;}
-
 body{
 margin:0;
 font-family:Segoe UI,Arial,sans-serif;
 background:#ffffff;
 color:#111827;
-line-height:1.6;
-font-size:15px;
+line-height:1.7;
 }
 
-/* ================= NAV ================= */
+/* NAV */
 nav{
 position:fixed;
 top:0;
 width:100%;
 background:#ffffff;
-padding:14px 40px;
+padding:18px 40px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-box-shadow:0 2px 12px rgba(0,0,0,0.05);
+box-shadow:0 2px 15px rgba(0,0,0,0.05);
 z-index:1000;
-transition:all 0.3s ease;
+transition:0.3s ease;
 }
 
 nav.scrolled{
-box-shadow:0 6px 20px rgba(0,0,0,0.08);
-padding:10px 40px;
-}
-
-nav div:first-child{
-font-size:16px;
-font-weight:600;
-letter-spacing:0.5px;
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
+padding:14px 40px;
 }
 
 nav a{
 text-decoration:none;
 color:#111;
-margin-left:18px;
-font-size:13px;
+margin-left:20px;
+font-size:14px;
 font-weight:500;
 transition:0.3s ease;
 }
+nav a:hover{color:#C81E3A;}
 
-nav a:hover{
-color:#C81E3A;
-}
-
-/* ================= HERO ================= */
+/* HERO */
 header{
-padding:140px 20px 80px;
+padding:180px 20px 120px;
 text-align:center;
 background:linear-gradient(to right,#ffffff,#f9fafb);
-margin-top:60px;
 }
-
 header h1{
-font-size:28px;
-max-width:850px;
+font-size:42px;
+max-width:900px;
 margin:auto;
-letter-spacing:-0.5px;
-line-height:1.3;
+letter-spacing:-1px;
 }
-
 header p{
-margin-top:12px;
+margin-top:20px;
 color:#6b7280;
-font-size:15px;
+font-size:18px;
 }
 
 .badge{
 display:inline-block;
-margin-top:12px;
+margin-top:20px;
 background:#C81E3A;
 color:white;
-padding:6px 16px;
+padding:8px 18px;
 border-radius:30px;
 font-weight:bold;
-font-size:12px;
 }
 
 .btn{
 display:inline-block;
-margin-top:18px;
-padding:12px 26px;
+margin-top:30px;
+padding:14px 30px;
 border-radius:40px;
 text-decoration:none;
 font-weight:bold;
-margin-right:10px;
-font-size:14px;
+margin-right:15px;
 transition:all 0.3s ease;
 }
 
@@ -116,8 +99,8 @@ color:#C81E3A;
 }
 
 .btn:hover{
-transform:translateY(-3px);
-box-shadow:0 8px 20px rgba(200,30,58,0.25);
+transform:translateY(-4px);
+box-shadow:0 10px 25px rgba(200,30,58,0.25);
 }
 
 .btn-outline:hover{
@@ -125,13 +108,13 @@ background:#C81E3A;
 color:white;
 }
 
-/* ================= SECTION ================= */
+/* SECTION */
 section{
-padding:80px 20px;
-max-width:1050px;
+padding:100px 20px;
+max-width:1100px;
 margin:auto;
 opacity:0;
-transform:translateY(30px);
+transform:translateY(40px);
 transition:all 0.8s ease;
 }
 
@@ -142,114 +125,264 @@ transform:translateY(0);
 
 h2{
 text-align:center;
-margin-bottom:25px;
-font-size:22px;
-letter-spacing:-0.3px;
-}
-
-h3{
-font-size:16px;
-margin-bottom:8px;
+margin-bottom:40px;
+font-size:30px;
+letter-spacing:-0.5px;
 }
 
 .card{
 background:white;
-padding:28px;
-border-radius:14px;
-box-shadow:0 6px 20px rgba(0,0,0,0.04);
-margin-bottom:20px;
-font-size:14px;
+padding:40px;
+border-radius:16px;
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
+margin-bottom:30px;
+transition:all 0.4s ease;
 }
 
-.card p{
-margin-bottom:12px;
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 15px 35px rgba(0,0,0,0.08);
 }
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
 }
 
-ul{
-padding-left:18px;
-}
+ul{padding-left:20px;}
 
-ul li{
-margin-bottom:6px;
-}
-
-/* ================= FOOTER ================= */
 footer{
 background:#0B1B3A;
 color:#d1d5db;
 text-align:center;
-padding:30px 20px;
-margin-top:60px;
-font-size:13px;
+padding:40px 20px;
+margin-top:80px;
 }
 
-/* ================= WHATSAPP ================= */
 .whatsapp{
 position:fixed;
-bottom:20px;
-right:20px;
+bottom:25px;
+right:25px;
 background:#25D366;
 color:white;
-padding:12px 16px;
+padding:14px 18px;
 border-radius:50px;
 text-decoration:none;
-font-size:13px;
 box-shadow:0 8px 20px rgba(0,0,0,0.2);
-}
-
-/* ================= MOBILE ================= */
-@media(max-width:768px){
-
-nav{
-flex-direction:column;
-align-items:flex-start;
-padding:12px 20px;
-}
-
-nav div:last-child{
-display:flex;
-flex-direction:column;
-width:100%;
-margin-top:8px;
-}
-
-nav a{
-margin:5px 0;
-font-size:14px;
-}
-
-header{
-padding:110px 20px 50px;
-margin-top:90px;
-}
-
-header h1{
-font-size:22px;
-}
-
-.btn{
-width:100%;
-margin:8px 0;
-text-align:center;
-}
-
-section{
-padding:60px 20px;
-}
-
-h2{
-font-size:18px;
-}
-
-.card{
-padding:22px;
-}
 }
 </style>
 </head>
+
+<body>
+
+<nav>
+<div style="font-weight:bold;font-size:18px;">Masfo Global Connect</div>
+<div>
+<a href="#overview">Overview</a>
+<a href="#vision">Vision</a>
+<a href="#mission">Mission</a>
+<a href="#units">Units</a>
+<a href="#services">Services</a>
+<a href="#model">Model</a>
+<a href="#market">Market</a>
+<a href="#advantage">Advantage</a>
+<a href="#leadership">Leadership</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<header>
+<h1>MASFO GLOBAL CONNECT LTD</h1>
+<p>Global Technology & Innovation Company</p>
+<div class="badge">RC Number: 8158126</div>
+<p><strong>Building Africa’s Digital Future</strong></p>
+
+<a href="#contact" class="btn btn-primary">Partner With Us</a>
+<a href="company-profile.pdf" class="btn btn-outline">Download Company Profile</a>
+</header>
+
+<!-- ALL YOUR ORIGINAL SECTIONS REMAIN EXACTLY THE SAME -->
+
+<section id="overview">
+<h2>Company Overview</h2>
+<div class="card">
+<p>Masfo Global Connect Ltd is a global technology and innovation company focused on developing advanced digital solutions, emerging technologies, and intelligent systems that support economic growth, smart agriculture, and cross-border digital commerce.</p>
+<p>The Company is committed to empowering individuals, businesses, and institutions through innovative technology, strategic partnerships, and scalable digital infrastructure designed for African and global markets.</p>
+</div>
+</section>
+
+<section id="vision">
+<h2>Vision</h2>
+<div class="card">
+To become a leading African technology and innovation company building intelligent digital solutions and sustainable systems that connect local opportunities to global markets.
+</div>
+</section>
+
+<section id="mission">
+<h2>Mission</h2>
+<div class="card">
+To deliver innovative, technology-driven solutions in artificial intelligence, software systems, blockchain infrastructure, smart agriculture, and digital trade while enabling capacity development, economic inclusion, and long-term value creation.
+</div>
+</section>
+
+<section>
+<h2>Core Values</h2>
+<div class="grid">
+<div class="card">Innovation</div>
+<div class="card">Integrity</div>
+<div class="card">Excellence</div>
+<div class="card">Trust</div>
+<div class="card">Collaboration</div>
+<div class="card">Sustainability</div>
+</div>
+</section>
+
+<section id="units">
+<h2>Our Strategic Technology Units</h2>
+
+<div class="card">
+<h3>Masfo AI & Technology</h3>
+<ul>
+<li>Software and web application development</li>
+<li>Artificial intelligence solutions</li>
+<li>Automation systems</li>
+<li>Digital platforms and enterprise tools</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Masfo Blockchain Lab</h3>
+<ul>
+<li>Blockchain solutions and advisory</li>
+<li>Smart contract systems</li>
+<li>Digital trust infrastructure</li>
+<li>Web3 innovation research</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Masfo AgriTech</h3>
+<ul>
+<li>Smart farming technologies</li>
+<li>Agri-data and productivity systems</li>
+<li>Technology-driven agricultural solutions</li>
+<li>Sustainable food production support</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Masfo Global Trade</h3>
+<ul>
+<li>Cross-border business support</li>
+<li>Digital commerce enablement</li>
+<li>Sourcing and distribution partnerships</li>
+<li>Market access solutions for African products and services</li>
+</ul>
+</div>
+
+</section>
+
+<section id="services">
+<h2>Services & Solutions</h2>
+<div class="card">
+<ul>
+<li>Technology consulting and system design</li>
+<li>Software and platform development</li>
+<li>AI-enabled business solutions</li>
+<li>Digital transformation support</li>
+<li>Capacity building and technology training</li>
+<li>Innovation and research partnerships</li>
+</ul>
+</div>
+</section>
+
+<section id="model">
+<h2>Business Model</h2>
+<div class="card">
+<ul>
+<li>Technology services</li>
+<li>Consulting</li>
+<li>Digital product development</li>
+<li>Training and capacity building</li>
+<li>Strategic partnerships and innovation programs</li>
+</ul>
+</div>
+</section>
+
+<section id="market">
+<h2>Target Market</h2>
+<div class="card">
+<ul>
+<li>Startups and SMEs</li>
+<li>Government institutions</li>
+<li>Development organizations</li>
+<li>Agricultural sector stakeholders</li>
+<li>International technology and investment partners</li>
+</ul>
+</div>
+</section>
+
+<section id="advantage">
+<h2>Competitive Advantage</h2>
+<div class="card">
+<ul>
+<li>Integrated technology, agriculture, and trade expertise</li>
+<li>Innovation-driven business structure</li>
+<li>Scalable digital solutions</li>
+<li>Strong understanding of African emerging markets</li>
+<li>Vision for global collaboration and expansion</li>
+</ul>
+</div>
+</section>
+
+<section id="leadership">
+<h2>Leadership</h2>
+<div class="card">
+<strong>Abdulrahman Ali</strong><br>
+Founder & Chief Executive Officer (CEO)<br><br>
+Provides strategic direction for the Company’s innovation, technology development, and global partnership initiatives.
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact Information</h2>
+<div class="card">
+Masfo Global Connect Ltd<br><br>
+No. 10, Dr Muh’d Plaza, Opp. Maiduguri Stadium,<br>
+Maiduguri, Borno State, Nigeria<br><br>
+Phone: +234 9077 951 355<br>
+Email: info@masfoglobal.com
+</div>
+</section>
+
+<footer>
+©️ 2026 Masfo Global Connect Ltd. All rights reserved.
+</footer>
+
+<a class="whatsapp" href="https://wa.me/2349077951355" target="_blank">Chat</a>
+
+<script>
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+sections.forEach(section => {
+const rect = section.getBoundingClientRect();
+if(rect.top < window.innerHeight - 100){
+section.classList.add("visible");
+}
+});
+});
+
+window.addEventListener("scroll", function(){
+const nav = document.querySelector("nav");
+if(window.scrollY > 50){
+nav.classList.add("scrolled");
+}else{
+nav.classList.remove("scrolled");
+}
+});
+</script>
+
+</body>
+</html>

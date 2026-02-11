@@ -6,6 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+
+html{
+scroll-behavior:smooth;
+}
+
 body{
 margin:0;
 font-family:Segoe UI,Arial,sans-serif;
@@ -16,13 +21,21 @@ line-height:1.6;
 
 header{
 background:#ffffff;
-padding:60px 20px;
+padding:70px 20px;
 text-align:center;
+}
+
+header img{
+max-width:220px;
+margin-bottom:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+border-radius:8px;
 }
 
 header h1{
 color:#0B1B3A;
 margin-bottom:10px;
+font-size:32px;
 }
 
 header p{
@@ -33,11 +46,11 @@ color:#0B1B3A;
 display:inline-block;
 background:#C81E3A;
 color:#ffffff;
-padding:6px 14px;
-border-radius:20px;
+padding:8px 16px;
+border-radius:30px;
 font-size:14px;
 font-weight:bold;
-margin-top:10px;
+margin-top:12px;
 }
 
 section{
@@ -46,15 +59,27 @@ max-width:1100px;
 margin:auto;
 }
 
-h2,h3{
+h2{
 color:#ffffff;
+font-size:26px;
+margin-bottom:20px;
+}
+
+h3{
+color:#ffffff;
+margin-top:0;
 }
 
 .card{
 background:#111827;
 padding:25px;
-border-radius:12px;
+border-radius:14px;
 margin-bottom:20px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
 }
 
 .grid{
@@ -74,14 +99,21 @@ a{
 color:#C81E3A;
 text-decoration:none;
 }
+
+@media(max-width:768px){
+header h1{
+font-size:24px;
+}
+}
+
 </style>
 
 </head>
+
 <body>
 
 <header>
-  <img src="logo.png" alt="Masfo Global Connect Ltd Logo"
-       style="max-width:220px;margin-bottom:20px;">
+  <img src="logo.jpg" alt="Masfo Global Connect Ltd Logo">
   <h1>MASFO GLOBAL CONNECT LTD</h1>
   <p><strong>Global Technology & Innovation Company</strong></p>
   <p class="badge">RC Number: 8158126</p>

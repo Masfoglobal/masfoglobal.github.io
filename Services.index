@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Services | Masfo Global Connect Ltd</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+<div class="logo">MASFO GLOBAL CONNECT</div>
+<div>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html" class="active">Services</a>
+<a href="leadership.html">Leadership</a>
+<a href="contact.html">Contact</a>
+</div>
+</nav>
+
+<section>
+<h2>Strategic Technology Units</h2>
+
+<div class="card">
+<h3>Masfo AI & Technology</h3>
+<p>Software development, AI solutions, automation systems.</p>
+</div>
+
+<div class="card">
+<h3>Masfo Blockchain Lab</h3>
+<p>Blockchain advisory, smart contracts, Web3 innovation.</p>
+</div>
+
+<div class="card">
+<h3>Masfo AgriTech</h3>
+<p>Smart farming systems and sustainable food production support.</p>
+</div>
+
+<div class="card">
+<h3>Masfo Global Trade</h3>
+<p>Cross-border business and digital commerce enablement.</p>
+</div>
+
+</section>
+
+<footer>
+© 2026 Masfo Global Connect Ltd
+</footer>
+
+</body>
+</html>

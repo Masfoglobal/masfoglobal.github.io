@@ -31,30 +31,35 @@ box-shadow:0 5px 20px rgba(0,0,0,0.4);
 nav a{
 color:#fff;
 text-decoration:none;
-margin-left:20px;
+margin-left:18px;
 font-size:14px;
 }
 nav a:hover{color:#C81E3A;}
 
 /* HERO */
 header{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
+padding:160px 20px 100px;
 text-align:center;
 background:linear-gradient(135deg,#0B1B3A,#162a56,#C81E3A);
-padding:20px;
 }
 header img{max-width:220px;margin-bottom:20px;}
-header h1{font-size:38px;margin:10px 0;}
-header p{max-width:700px;}
+header h1{font-size:36px;margin:10px 0;}
+header p{max-width:800px;margin:auto;}
+
+.badge{
+display:inline-block;
+background:#fff;
+color:#C81E3A;
+padding:8px 18px;
+border-radius:30px;
+margin-top:15px;
+font-weight:bold;
+}
 
 .btn{
-margin-top:25px;
 display:inline-block;
-padding:12px 25px;
+margin-top:25px;
+padding:12px 28px;
 background:#C81E3A;
 color:#fff;
 border-radius:30px;
@@ -63,40 +68,32 @@ font-weight:bold;
 }
 .btn:hover{background:#a5142b;}
 
-/* SECTIONS */
+/* SECTION */
 section{
 padding:100px 20px;
 max-width:1100px;
 margin:auto;
 }
-h2{margin-bottom:40px;text-align:center;font-size:28px;}
+h2{
+margin-bottom:40px;
+text-align:center;
+font-size:28px;
+}
 
-/* CARDS */
+.card{
+background:#111827;
+padding:30px;
+border-radius:15px;
+margin-bottom:25px;
+}
+
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
 }
-.card{
-background:#111827;
-padding:30px;
-border-radius:15px;
-transition:0.3s;
-}
-.card:hover{transform:translateY(-8px);}
 
-/* STATS */
-.stats{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
-text-align:center;
-}
-.stat{
-font-size:40px;
-font-weight:bold;
-color:#C81E3A;
-}
+ul{padding-left:20px;}
 
 /* FOOTER */
 footer{
@@ -132,63 +129,154 @@ nav{padding:15px 20px;}
 <nav>
 <div style="color:#fff;font-weight:bold;">MASFO</div>
 <div>
-<a href="#about">About</a>
+<a href="#overview">Overview</a>
+<a href="#vision">Vision</a>
+<a href="#mission">Mission</a>
+<a href="#units">Units</a>
 <a href="#services">Services</a>
-<a href="#impact">Impact</a>
+<a href="#advantage">Advantage</a>
 <a href="#contact">Contact</a>
 </div>
 </nav>
 
 <header>
 <img src="logo.jpg" alt="Masfo Logo">
-<h1>Building Africa’s Digital Future</h1>
-<p>
-Masfo Global Connect Ltd develops intelligent digital infrastructure,
-AI systems, blockchain solutions, and smart agriculture technologies
-connecting African opportunities to global markets.
-</p>
+<h1>MASFO GLOBAL CONNECT LTD</h1>
+<p>Global Technology & Innovation Company</p>
+<div class="badge">RC Number: 8158126</div>
+<p style="margin-top:20px;font-size:18px;">Building Africa’s Digital Future</p>
 <a href="#contact" class="btn">Partner With Us</a>
 </header>
 
-<section id="about">
-<h2>About Masfo</h2>
+<section id="overview">
+<h2>Company Overview</h2>
 <div class="card">
-Masfo Global Connect Ltd is a registered global technology and innovation company (RC: 8158126)
-focused on scalable digital systems, emerging technologies, and economic empowerment
-across Africa and international markets.
+<p>
+Masfo Global Connect Ltd is a global technology and innovation company focused on developing advanced digital solutions, emerging technologies, and intelligent systems that support economic growth, smart agriculture, and cross-border digital commerce.
+</p>
+<p>
+The Company is committed to empowering individuals, businesses, and institutions through innovative technology, strategic partnerships, and scalable digital infrastructure designed for African and global markets.
+</p>
 </div>
+</section>
+
+<section id="vision">
+<h2>Vision</h2>
+<div class="card">
+To become a leading African technology and innovation company building intelligent digital solutions and sustainable systems that connect local opportunities to global markets.
+</div>
+</section>
+
+<section id="mission">
+<h2>Mission</h2>
+<div class="card">
+To deliver innovative, technology-driven solutions in artificial intelligence, software systems, blockchain infrastructure, smart agriculture, and digital trade while enabling capacity development, economic inclusion, and long-term value creation.
+</div>
+</section>
+
+<section>
+<h2>Core Values</h2>
+<div class="grid">
+<div class="card">Innovation</div>
+<div class="card">Integrity</div>
+<div class="card">Excellence</div>
+<div class="card">Trust</div>
+<div class="card">Collaboration</div>
+<div class="card">Sustainability</div>
+</div>
+</section>
+
+<section id="units">
+<h2>Our Strategic Technology Units</h2>
+
+<div class="card">
+<h3>Masfo AI & Technology</h3>
+<ul>
+<li>Software and web application development</li>
+<li>Artificial intelligence solutions</li>
+<li>Automation systems</li>
+<li>Digital platforms and enterprise tools</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Masfo Blockchain Lab</h3>
+<ul>
+<li>Blockchain solutions and advisory</li>
+<li>Smart contract systems</li>
+<li>Digital trust infrastructure</li>
+<li>Web3 innovation research</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Masfo AgriTech</h3>
+<ul>
+<li>Smart farming technologies</li>
+<li>Agri-data and productivity systems</li>
+<li>Technology-driven agricultural solutions</li>
+<li>Sustainable food production support</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Masfo Global Trade</h3>
+<ul>
+<li>Cross-border business support</li>
+<li>Digital commerce enablement</li>
+<li>Sourcing and distribution partnerships</li>
+<li>Market access solutions for African products and services</li>
+</ul>
+</div>
+
 </section>
 
 <section id="services">
-<h2>Core Technology Units</h2>
-<div class="grid">
-<div class="card">AI & Intelligent Systems</div>
-<div class="card">Blockchain Infrastructure & Web3</div>
-<div class="card">Smart Agriculture Technology</div>
-<div class="card">Global Digital Trade Platforms</div>
+<h2>Services & Solutions</h2>
+<div class="card">
+<ul>
+<li>Technology consulting and system design</li>
+<li>Software and platform development</li>
+<li>AI-enabled business solutions</li>
+<li>Digital transformation support</li>
+<li>Capacity building and technology training</li>
+<li>Innovation and research partnerships</li>
+</ul>
 </div>
 </section>
 
-<section id="impact">
-<h2>Strategic Vision Impact</h2>
-<div class="stats">
-<div>
-<div class="stat" id="count1">0</div>
-<p>Technology Units</p>
+<section>
+<h2>Business Model</h2>
+<div class="card">
+Technology services, consulting, digital product development, training and capacity building, and strategic partnerships and innovation programs.
 </div>
-<div>
-<div class="stat" id="count2">0</div>
-<p>Core Service Areas</p>
+</section>
+
+<section>
+<h2>Target Market</h2>
+<div class="card">
+Startups and SMEs, Government institutions, Development organizations, Agricultural sector stakeholders, International technology and investment partners.
 </div>
-<div>
-<div class="stat" id="count3">0</div>
-<p>Target Market Segments</p>
+</section>
+
+<section id="advantage">
+<h2>Competitive Advantage</h2>
+<div class="card">
+Integrated technology, agriculture, and trade expertise. Innovation-driven business structure. Scalable digital solutions. Strong understanding of African emerging markets. Vision for global collaboration and expansion.
 </div>
+</section>
+
+<section>
+<h2>Leadership</h2>
+<div class="card">
+<strong>Abdulrahman Ali</strong><br>
+Founder & Chief Executive Officer (CEO)<br><br>
+Provides strategic direction for the Company’s innovation, technology development, and global partnership initiatives.
 </div>
 </section>
 
 <section id="contact">
-<h2>Contact & Partnerships</h2>
+<h2>Contact Information</h2>
 <div class="card">
 Masfo Global Connect Ltd<br><br>
 No. 10, Dr Muh’d Plaza, Opp. Maiduguri Stadium,<br>
@@ -203,25 +291,6 @@ Email: info@masfoglobal.com
 </footer>
 
 <a class="whatsapp" href="https://wa.me/2349077951355" target="_blank">💬</a>
-
-<script>
-function animate(id, end){
-let start=0;
-let duration=2000;
-let stepTime=Math.abs(Math.floor(duration/end));
-let obj=document.getElementById(id);
-let timer=setInterval(function(){
-start+=1;
-obj.textContent=start;
-if(start==end){
-clearInterval(timer);
-}
-},stepTime);
-}
-animate("count1",4);
-animate("count2",6);
-animate("count3",5);
-</script>
 
 </body>
 </html>

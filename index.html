@@ -3,25 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Masfo Global Connect Ltd | Global Technology & Innovation Company</title>
 
-<meta name="description" content="Masfo Global Connect Ltd is a global technology and innovation company delivering AI solutions, blockchain infrastructure, smart agriculture systems, and digital trade platforms across Africa and global markets.">
-
-<meta name="keywords" content="Masfo Global Connect Ltd, AI Nigeria, Blockchain Africa, Smart Agriculture Technology, Digital Trade Africa, Technology Innovation Company">
-
-<meta name="author" content="Masfo Global Connect Ltd">
+<meta name="description" content="Masfo Global Connect Ltd is a global technology and innovation company delivering AI, blockchain, smart agriculture and digital trade systems across Africa and global markets.">
 
 <link rel="icon" href="logo.jpg">
 
 <style>
 html{scroll-behavior:smooth;}
+
 body{
 margin:0;
 font-family:Segoe UI,Arial,sans-serif;
 background:#0B1B3A;
 color:#E5E7EB;
 line-height:1.8;
+transition:0.4s;
+}
+
+body.light{
+background:#f4f6f9;
+color:#111;
 }
 
 /* NAV */
@@ -29,30 +31,38 @@ nav{
 position:fixed;
 top:0;
 width:100%;
-background:#0B1B3A;
+background:rgba(11,27,58,0.95);
 padding:15px 40px;
 display:flex;
 justify-content:space-between;
 align-items:center;
 z-index:1000;
-box-shadow:0 5px 20px rgba(0,0,0,0.4);
+backdrop-filter:blur(10px);
 }
 nav a{
 color:#fff;
 text-decoration:none;
-margin-left:16px;
+margin-left:14px;
 font-size:14px;
 }
 nav a:hover{color:#C81E3A;}
+.toggle{
+cursor:pointer;
+background:#C81E3A;
+padding:6px 14px;
+border-radius:20px;
+font-size:13px;
+}
 
 /* HERO */
 header{
-padding:180px 20px 120px;
+padding:190px 20px 120px;
 text-align:center;
 background:linear-gradient(135deg,#0B1B3A,#162a56,#C81E3A);
 }
 header img{max-width:220px;margin-bottom:20px;}
-header h1{font-size:34px;margin:10px 0;}
+header h1{font-size:32px;margin:10px 0;}
+
 .badge{
 display:inline-block;
 background:#fff;
@@ -62,36 +72,34 @@ border-radius:30px;
 margin-top:15px;
 font-weight:bold;
 }
-.btn{
-display:inline-block;
-margin-top:25px;
-padding:12px 28px;
-background:#C81E3A;
-color:#fff;
-border-radius:30px;
-text-decoration:none;
-font-weight:bold;
-}
-.btn:hover{background:#a5142b;}
 
 /* SECTION */
 section{
-padding:110px 20px;
+padding:120px 20px;
 max-width:1100px;
 margin:auto;
+opacity:0;
+transform:translateY(40px);
+transition:all 0.8s ease;
 }
+section.visible{
+opacity:1;
+transform:translateY(0);
+}
+
 h2{
 margin-bottom:40px;
 text-align:center;
 font-size:28px;
+letter-spacing:1px;
 }
-h3{margin-top:0;}
 
 .card{
-background:#111827;
-padding:35px;
-border-radius:15px;
-margin-bottom:30px;
+background:rgba(255,255,255,0.06);
+padding:40px;
+border-radius:18px;
+margin-bottom:35px;
+backdrop-filter:blur(12px);
 }
 
 .grid{
@@ -109,6 +117,7 @@ text-align:center;
 color:#94a3b8;
 }
 
+/* WHATSAPP */
 .whatsapp{
 position:fixed;
 bottom:25px;
@@ -123,7 +132,7 @@ box-shadow:0 8px 20px rgba(0,0,0,0.4);
 }
 
 @media(max-width:768px){
-header h1{font-size:24px;}
+header h1{font-size:22px;}
 nav{padding:15px 20px;}
 }
 </style>
@@ -137,34 +146,24 @@ nav{padding:15px 20px;}
 <a href="#overview">Overview</a>
 <a href="#vision">Vision</a>
 <a href="#mission">Mission</a>
-<a href="#units">Units</a>
 <a href="#services">Services</a>
-<a href="#model">Business Model</a>
-<a href="#market">Market</a>
-<a href="#advantage">Advantage</a>
-<a href="#leadership">Leadership</a>
 <a href="#contact">Contact</a>
+<span class="toggle" onclick="toggleMode()">🌗 Mode</span>
 </div>
 </nav>
 
 <header>
-<img src="logo.jpg" alt="Masfo Global Connect Ltd Logo">
+<img src="logo.jpg" alt="Masfo Logo">
 <h1>MASFO GLOBAL CONNECT LTD</h1>
 <p>Global Technology & Innovation Company</p>
 <div class="badge">RC Number: 8158126</div>
 <p style="margin-top:20px;font-size:18px;">Building Africa’s Digital Future</p>
-<a href="#contact" class="btn">Partner With Us</a>
 </header>
 
 <section id="overview">
 <h2>Company Overview</h2>
 <div class="card">
-<p>
-Masfo Global Connect Ltd is a global technology and innovation company focused on developing advanced digital solutions, emerging technologies, and intelligent systems that support economic growth, smart agriculture, and cross-border digital commerce.
-</p>
-<p>
-The Company is committed to empowering individuals, businesses, and institutions through innovative technology, strategic partnerships, and scalable digital infrastructure designed for African and global markets.
-</p>
+Masfo Global Connect Ltd is a global technology and innovation company focused on developing advanced digital solutions, emerging technologies, and intelligent systems that support economic growth, smart agriculture, and cross-border digital commerce. The Company is committed to empowering individuals, businesses, and institutions through innovative technology, strategic partnerships, and scalable digital infrastructure designed for African and global markets.
 </div>
 </section>
 
@@ -182,123 +181,15 @@ To deliver innovative, technology-driven solutions in artificial intelligence, s
 </div>
 </section>
 
-<section>
-<h2>Core Values</h2>
-<div class="grid">
-<div class="card">Innovation</div>
-<div class="card">Integrity</div>
-<div class="card">Excellence</div>
-<div class="card">Trust</div>
-<div class="card">Collaboration</div>
-<div class="card">Sustainability</div>
-</div>
-</section>
-
-<section id="units">
-<h2>Our Strategic Technology Units</h2>
-
-<div class="card">
-<h3>Masfo AI & Technology</h3>
-<ul>
-<li>Software and web application development</li>
-<li>Artificial intelligence solutions</li>
-<li>Automation systems</li>
-<li>Digital platforms and enterprise tools</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Masfo Blockchain Lab</h3>
-<ul>
-<li>Blockchain solutions and advisory</li>
-<li>Smart contract systems</li>
-<li>Digital trust infrastructure</li>
-<li>Web3 innovation research</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Masfo AgriTech</h3>
-<ul>
-<li>Smart farming technologies</li>
-<li>Agri-data and productivity systems</li>
-<li>Technology-driven agricultural solutions</li>
-<li>Sustainable food production support</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Masfo Global Trade</h3>
-<ul>
-<li>Cross-border business support</li>
-<li>Digital commerce enablement</li>
-<li>Sourcing and distribution partnerships</li>
-<li>Market access solutions for African products and services</li>
-</ul>
-</div>
-
-</section>
-
 <section id="services">
 <h2>Services & Solutions</h2>
-<div class="card">
-<ul>
-<li>Technology consulting and system design</li>
-<li>Software and platform development</li>
-<li>AI-enabled business solutions</li>
-<li>Digital transformation support</li>
-<li>Capacity building and technology training</li>
-<li>Innovation and research partnerships</li>
-</ul>
-</div>
-</section>
-
-<section id="model">
-<h2>Business Model</h2>
-<div class="card">
-The Company operates a hybrid model combining:
-<ul>
-<li>Technology services</li>
-<li>Consulting</li>
-<li>Digital product development</li>
-<li>Training and capacity building</li>
-<li>Strategic partnerships and innovation programs</li>
-</ul>
-</div>
-</section>
-
-<section id="market">
-<h2>Target Market</h2>
-<div class="card">
-<ul>
-<li>Startups and SMEs</li>
-<li>Government institutions</li>
-<li>Development organizations</li>
-<li>Agricultural sector stakeholders</li>
-<li>International technology and investment partners</li>
-</ul>
-</div>
-</section>
-
-<section id="advantage">
-<h2>Competitive Advantage</h2>
-<div class="card">
-<ul>
-<li>Integrated technology, agriculture, and trade expertise</li>
-<li>Innovation-driven business structure</li>
-<li>Scalable digital solutions</li>
-<li>Strong understanding of African emerging markets</li>
-<li>Vision for global collaboration and expansion</li>
-</ul>
-</div>
-</section>
-
-<section id="leadership">
-<h2>Leadership</h2>
-<div class="card">
-<strong>Abdulrahman Ali</strong><br>
-Founder & Chief Executive Officer (CEO)<br><br>
-Provides strategic direction for the Company’s innovation, technology development, and global partnership initiatives.
+<div class="grid">
+<div class="card">Technology consulting and system design</div>
+<div class="card">Software and platform development</div>
+<div class="card">AI-enabled business solutions</div>
+<div class="card">Digital transformation support</div>
+<div class="card">Capacity building and technology training</div>
+<div class="card">Innovation and research partnerships</div>
 </div>
 </section>
 
@@ -318,6 +209,22 @@ Email: info@masfoglobal.com
 </footer>
 
 <a class="whatsapp" href="https://wa.me/2349077951355" target="_blank">💬</a>
+
+<script>
+function toggleMode(){
+document.body.classList.toggle("light");
+}
+
+const sections=document.querySelectorAll("section");
+window.addEventListener("scroll",()=>{
+sections.forEach(sec=>{
+const rect=sec.getBoundingClientRect();
+if(rect.top<window.innerHeight-100){
+sec.classList.add("visible");
+}
+});
+});
+</script>
 
 </body>
 </html>

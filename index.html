@@ -16,106 +16,124 @@ margin:0;
 font-family:Segoe UI,Arial,sans-serif;
 background:#0B1B3A;
 color:#E5E7EB;
-line-height:1.6;
+transition:0.4s;
 }
 
-/* NAVIGATION */
+/* LIGHT MODE */
+body.light{
+background:#f4f6f9;
+color:#0B1B3A;
+}
+
+/* NAV */
 nav{
 position:fixed;
 top:0;
 width:100%;
-background:#0B1B3A;
+background:rgba(11,27,58,0.95);
 padding:15px 40px;
 display:flex;
 justify-content:space-between;
 align-items:center;
 z-index:1000;
-box-shadow:0 5px 15px rgba(0,0,0,0.3);
+backdrop-filter:blur(10px);
 }
 
 nav a{
 color:#fff;
 text-decoration:none;
 margin-left:20px;
-font-weight:500;
 }
 
 nav a:hover{
 color:#C81E3A;
 }
 
-/* HEADER */
+.toggle{
+cursor:pointer;
+background:#C81E3A;
+padding:6px 14px;
+border-radius:20px;
+font-size:13px;
+}
+
+/* HERO */
 header{
-background:#ffffff;
-padding:140px 20px 80px 20px;
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 text-align:center;
+background:linear-gradient(135deg,#0B1B3A,#162a56,#C81E3A);
+color:#fff;
+padding:20px;
 }
 
 header img{
 max-width:220px;
 margin-bottom:20px;
+animation:fadeIn 1.5s ease;
 }
 
 header h1{
-color:#0B1B3A;
-margin-bottom:10px;
-font-size:32px;
+font-size:36px;
+margin:10px 0;
+animation:fadeIn 2s ease;
 }
 
 header p{
-color:#0B1B3A;
+animation:fadeIn 2.5s ease;
 }
 
 .badge{
-display:inline-block;
-background:#C81E3A;
-color:#ffffff;
+background:#fff;
+color:#C81E3A;
 padding:8px 16px;
 border-radius:30px;
-font-size:14px;
+margin-top:15px;
 font-weight:bold;
-margin-top:12px;
 }
 
 /* SECTIONS */
 section{
-padding:80px 20px;
+padding:100px 20px;
 max-width:1100px;
 margin:auto;
 }
 
 h2{
-color:#ffffff;
-margin-bottom:25px;
+margin-bottom:30px;
 }
 
+/* GLASS CARDS */
 .card{
-background:#111827;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(15px);
 padding:25px;
-border-radius:14px;
+border-radius:16px;
 margin-bottom:20px;
-transition:0.3s;
+transition:0.4s;
 }
 
 .card:hover{
-transform:translateY(-6px);
+transform:translateY(-8px);
+background:rgba(255,255,255,0.15);
 }
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 }
 
-/* FOOTER */
 footer{
 background:#020617;
-padding:30px 20px;
+padding:30px;
 text-align:center;
-color:#94a3b8;
 }
 
-/* WHATSAPP BUTTON */
+/* WHATSAPP */
 .whatsapp{
 position:fixed;
 bottom:25px;
@@ -133,16 +151,15 @@ box-shadow:0 8px 20px rgba(0,0,0,0.4);
 background:#1ebe5d;
 }
 
+/* ANIMATION */
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(20px);}
+to{opacity:1; transform:translateY(0);}
+}
+
 @media(max-width:768px){
-nav{
-padding:15px 20px;
-}
-nav a{
-margin-left:10px;
-font-size:14px;
-}
-header{
-padding-top:160px;
+header h1{
+font-size:26px;
 }
 }
 
@@ -151,63 +168,48 @@ padding-top:160px;
 
 <body>
 
-<!-- NAVIGATION -->
 <nav>
 <div style="color:#fff;font-weight:bold;">MASFO</div>
 <div>
 <a href="#overview">Overview</a>
-<a href="#vision">Vision</a>
 <a href="#services">Services</a>
 <a href="#contact">Contact</a>
+<span class="toggle" onclick="toggleMode()">🌗 Mode</span>
 </div>
 </nav>
 
-<!-- HEADER -->
 <header>
-  <img src="logo.jpg" alt="Masfo Logo">
-  <h1>MASFO GLOBAL CONNECT LTD</h1>
-  <p><strong>Global Technology & Innovation Company</strong></p>
-  <p class="badge">RC Number: 8158126</p>
-  <p style="margin-top:20px;font-size:18px;">
-    Building Africa’s Digital Future
-  </p>
+<img src="logo.jpg" alt="Masfo Logo">
+<h1>MASFO GLOBAL CONNECT LTD</h1>
+<p>Global Technology & Innovation Company</p>
+<div class="badge">RC Number: 8158126</div>
+<p style="margin-top:20px;">Building Africa’s Digital Future</p>
 </header>
 
 <section id="overview">
 <h2>Company Overview</h2>
 <div class="card">
-<p>
-Masfo Global Connect Ltd is a global technology and innovation company focused on developing
-advanced digital solutions and intelligent systems supporting economic growth.
-</p>
-</div>
-</section>
-
-<section id="vision">
-<h2>Vision</h2>
-<div class="card">
-<p>
-To become a leading African technology and innovation company building intelligent digital solutions.
-</p>
+Masfo Global Connect Ltd develops intelligent digital systems,
+AI solutions, blockchain infrastructure and global digital trade platforms.
 </div>
 </section>
 
 <section id="services">
-<h2>Services & Solutions</h2>
+<h2>Core Technology Areas</h2>
 <div class="grid">
-<div class="card">AI & Software Development</div>
-<div class="card">Blockchain Infrastructure</div>
-<div class="card">Smart Agriculture</div>
-<div class="card">Global Digital Trade</div>
+<div class="card">Artificial Intelligence & Automation</div>
+<div class="card">Blockchain & Web3 Infrastructure</div>
+<div class="card">Smart Agriculture Systems</div>
+<div class="card">Global Digital Commerce</div>
 </div>
 </section>
 
 <section id="contact">
-<h2>Contact Information</h2>
+<h2>Contact</h2>
 <div class="card">
-<p><strong>Phone:</strong> +234 9077 951 355</p>
-<p><strong>Email:</strong> info@masfoglobal.com</p>
-<p><strong>Location:</strong> Maiduguri, Nigeria</p>
+Phone: +234 9077 951 355<br><br>
+Email: info@masfoglobal.com<br><br>
+Maiduguri, Nigeria
 </div>
 </section>
 
@@ -215,8 +217,13 @@ To become a leading African technology and innovation company building intellige
 © 2026 Masfo Global Connect Ltd. All rights reserved.
 </footer>
 
-<!-- WHATSAPP -->
 <a class="whatsapp" href="https://wa.me/2349077951355" target="_blank">💬</a>
+
+<script>
+function toggleMode(){
+document.body.classList.toggle("light");
+}
+</script>
 
 </body>
 </html>

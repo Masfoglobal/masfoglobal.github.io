@@ -8,76 +8,160 @@
 
 <meta name="description" content="Masfo Global Connect Ltd is a global technology and innovation company delivering AI, blockchain, smart agriculture and digital trade systems across Africa and global markets.">
 
-<meta name="keywords" content="Masfo, AI, Blockchain, AgriTech, Africa Tech, Digital Innovation, Smart Agriculture, Web3, African Startup">
-
-<meta property="og:title" content="Masfo Global Connect Ltd">
-<meta property="og:description" content="Building Africa’s Digital Future">
-<meta property="og:type" content="website">
-<meta property="og:image" content="logo.jpg">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Masfo Global Connect Ltd">
-<meta name="twitter:description" content="Building Africa’s Digital Future">
-
 <link rel="icon" href="logo.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
+*{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:'Poppins',sans-serif;background:#0B1B3A;color:#E5E7EB;line-height:1.8;overflow-x:hidden;}
-#progressBar{position:fixed;top:0;left:0;height:4px;background:#C81E3A;width:0%;z-index:2000;}
-#loader{position:fixed;width:100%;height:100vh;background:#0B1B3A;display:flex;align-items:center;justify-content:center;z-index:3000;font-weight:700;letter-spacing:2px;}
-#topBtn{position:fixed;bottom:30px;right:30px;background:#C81E3A;color:white;border:none;padding:12px 16px;border-radius:50%;cursor:pointer;display:none;z-index:1000;}
-nav{position:fixed;top:0;width:100%;padding:22px 80px;display:flex;justify-content:space-between;align-items:center;background:rgba(8,21,43,0.6);backdrop-filter:blur(20px);z-index:1000;transition:0.4s ease;}
-nav.scrolled{background:#08152b;box-shadow:0 12px 40px rgba(0,0,0,0.7);}
-nav img{height:48px;}
-.menu-toggle{display:none;font-size:32px;cursor:pointer;color:white;}
-.nav-links{display:flex;}
-.nav-links a{color:#E5E7EB;text-decoration:none;margin-left:36px;font-size:14px;}
-.hero{padding:280px 20px 200px;text-align:center;}
-.hero h1{font-size:64px;font-weight:800;margin-bottom:20px;background:linear-gradient(90deg,#ffffff,#C81E3A);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
-.hero p{font-size:20px;margin-bottom:16px;}
-.btn{display:inline-block;padding:18px 42px;border-radius:60px;text-decoration:none;font-weight:600;margin:16px;transition:0.4s ease;}
-.btn-primary{background:#C81E3A;color:white;box-shadow:0 15px 40px rgba(200,30,58,0.6);}
-.btn-outline{border:2px solid white;color:white;}
-.btn:hover{transform:translateY(-6px);}
-section{padding:160px 20px;max-width:1250px;margin:auto;opacity:0;transform:translateY(80px);transition:1s ease;}
-section.show{opacity:1;transform:translateY(0);}
-h2{font-size:38px;margin-bottom:45px;text-align:center;}
-.card{background:rgba(17,31,61,0.75);padding:65px;border-radius:28px;margin-bottom:55px;box-shadow:0 30px 80px rgba(0,0,0,0.7);}
-footer{background:#08152b;text-align:center;padding:70px 20px;}
-@media(max-width:1000px){
-.menu-toggle{display:block;}
-.nav-links{position:fixed;top:0;left:-100%;height:100vh;width:300px;background:#0B1B3A;flex-direction:column;padding-top:140px;padding-left:40px;transition:0.4s ease;}
-.nav-links.active{left:0;}
-.hero{padding:190px 20px 120px;}
-.hero h1{font-size:34px;}
-section{padding:90px 20px;}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+padding:20px 80px;
+display:flex;
+align-items:center;
+background:rgba(8,21,43,0.9);
+z-index:1000;
 }
-body.menu-open{overflow:hidden;}
+
+.nav-left{flex:1;}
+.nav-left img{height:48px;}
+
+.nav-links{
+flex:1;
+display:flex;
+justify-content:center;
+gap:30px;
+}
+
+.nav-links a{
+color:#E5E7EB;
+text-decoration:none;
+font-size:14px;
+}
+
+.nav-right{
+flex:1;
+display:flex;
+justify-content:flex-end;
+}
+
+.nav-cta{
+background:#C81E3A;
+color:white;
+padding:10px 22px;
+border-radius:30px;
+font-weight:600;
+text-decoration:none;
+}
+
+.menu-toggle{
+display:none;
+font-size:30px;
+cursor:pointer;
+color:white;
+}
+
+.hero{
+padding:220px 20px 120px;
+text-align:center;
+}
+
+.hero h1{
+font-size:60px;
+font-weight:800;
+margin-bottom:20px;
+}
+
+.hero p{font-size:18px;margin-bottom:10px;}
+
+section{
+padding:100px 20px;
+max-width:1100px;
+margin:auto;
+}
+
+h2{
+text-align:center;
+margin-bottom:40px;
+font-size:32px;
+}
+
+.card{
+background:rgba(17,31,61,0.85);
+padding:50px;
+border-radius:20px;
+}
+
+ul{margin-top:10px;margin-left:20px;}
+footer{
+background:#08152b;
+text-align:center;
+padding:40px 20px;
+margin-top:60px;
+}
+
+/* MOBILE */
+@media(max-width:1000px){
+
+.menu-toggle{display:block;}
+.nav-right{display:none;}
+
+.nav-links{
+position:fixed;
+top:90px;
+left:-100%;
+width:260px;
+height:100vh;
+background:#0B1B3A;
+flex-direction:column;
+padding:30px;
+transition:0.4s;
+}
+
+.nav-links.active{left:0;}
+
+.nav-links a{margin:10px 0;}
+
+.nav-links .nav-cta{
+display:block;
+margin-top:20px;
+text-align:center;
+}
+
+.hero h1{font-size:32px;}
+}
 </style>
 </head>
 
 <body>
 
-<div id="loader">MASFO LOADING...</div>
-<div id="progressBar"></div>
-<button id="topBtn">↑</button>
-
-<nav id="navbar">
+<nav>
+<div class="nav-left">
 <img src="logo.jpg" alt="Masfo Logo">
+</div>
+
 <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
 <div class="nav-links" id="navLinks">
 <a href="#overview">Overview</a>
 <a href="#vision">Vision</a>
 <a href="#mission">Mission</a>
+<a href="#values">Core Values</a>
 <a href="#units">Units</a>
 <a href="#services">Services</a>
 <a href="#model">Model</a>
 <a href="#market">Market</a>
-<a href="#advantage">Competitive Advantage</a>
+<a href="#advantage">Advantage</a>
 <a href="#leadership">Leadership</a>
 <a href="#contact">Contact</a>
+<a href="#contact" class="nav-cta">Get Started</a>
+</div>
+
+<div class="nav-right">
+<a href="#contact" class="nav-cta">Get Started</a>
 </div>
 </nav>
 
@@ -85,15 +169,17 @@ body.menu-open{overflow:hidden;}
 <h1>MASFO GLOBAL CONNECT LTD</h1>
 <p>Global Technology & Innovation Company</p>
 <p><strong>RC Number: 8158126</strong></p>
+<p>No. 10, Dr Muh’d Plaza, Opp. Maiduguri Stadium,<br>Maiduguri, Borno State, Nigeria</p>
+<p>Phone: +234 9077 951 355 | Email: info@masfoglobal.com</p>
 <p><strong>Building Africa’s Digital Future</strong></p>
-<a href="#contact" class="btn btn-primary">Become Partner</a>
-<a href="#" class="btn btn-outline">Download Profile</a>
 </div>
 
 <section id="overview">
 <h2>Company Overview</h2>
 <div class="card">
-Masfo Global Connect Ltd is a global technology and innovation company focused on developing advanced digital solutions, emerging technologies, and intelligent systems that support economic growth, smart agriculture, and cross-border digital commerce.<br><br>
+Masfo Global Connect Ltd is a global technology and innovation company focused on developing advanced digital solutions, emerging technologies, and intelligent systems that support economic growth, smart agriculture, and cross-border digital commerce.
+
+<br><br>
 The Company is committed to empowering individuals, businesses, and institutions through innovative technology, strategic partnerships, and scalable digital infrastructure designed for African and global markets.
 </div>
 </section>
@@ -112,17 +198,31 @@ To deliver innovative, technology-driven solutions in artificial intelligence, s
 </div>
 </section>
 
+<section id="values">
+<h2>Core Values</h2>
+<div class="card">
+<ul>
+<li>Innovation</li>
+<li>Integrity</li>
+<li>Excellence</li>
+<li>Trust</li>
+<li>Collaboration</li>
+<li>Sustainability</li>
+</ul>
+</div>
+</section>
+
 <section id="units">
 <h2>Our Strategic Technology Units</h2>
 <div class="card">
-<strong>Masfo AI & Technology</strong><br><br>
-Focused on:
+<strong>Masfo AI & Technology</strong>
 <ul>
 <li>Software and web application development</li>
 <li>Artificial intelligence solutions</li>
 <li>Automation systems</li>
 <li>Digital platforms and enterprise tools</li>
 </ul>
+
 <strong>Masfo Blockchain Lab</strong>
 <ul>
 <li>Blockchain solutions and advisory</li>
@@ -130,6 +230,7 @@ Focused on:
 <li>Digital trust infrastructure</li>
 <li>Web3 innovation research</li>
 </ul>
+
 <strong>Masfo AgriTech</strong>
 <ul>
 <li>Smart farming technologies</li>
@@ -137,6 +238,7 @@ Focused on:
 <li>Technology-driven agricultural solutions</li>
 <li>Sustainable food production support</li>
 </ul>
+
 <strong>Masfo Global Trade</strong>
 <ul>
 <li>Cross-border business support</li>
@@ -150,7 +252,6 @@ Focused on:
 <section id="services">
 <h2>Services & Solutions</h2>
 <div class="card">
-Masfo Global Connect Ltd provides:
 <ul>
 <li>Technology consulting and system design</li>
 <li>Software and platform development</li>
@@ -165,7 +266,6 @@ Masfo Global Connect Ltd provides:
 <section id="model">
 <h2>Business Model</h2>
 <div class="card">
-The Company operates a hybrid model combining:
 <ul>
 <li>Technology services</li>
 <li>Consulting</li>
@@ -223,28 +323,13 @@ Email: info@masfoglobal.com
 </section>
 
 <footer>
-© <span id="year"></span> Masfo Global Connect Ltd. All rights reserved.
+© 2026 Masfo Global Connect Ltd. All rights reserved.
 </footer>
 
 <script>
 function toggleMenu(){
 document.getElementById("navLinks").classList.toggle("active");
-document.body.classList.toggle("menu-open");
 }
-window.addEventListener("scroll",()=>{
-let winScroll=document.documentElement.scrollTop;
-let height=document.documentElement.scrollHeight-document.documentElement.clientHeight;
-document.getElementById("progressBar").style.width=(winScroll/height)*100+"%";
-document.getElementById("navbar").classList.toggle("scrolled",window.scrollY>60);
-document.getElementById("topBtn").style.display=window.scrollY>500?"block":"none";
-});
-document.getElementById("topBtn").onclick=function(){window.scrollTo({top:0,behavior:'smooth'});};
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("show");}});
-},{threshold:0.15});
-document.querySelectorAll("section").forEach(sec=>observer.observe(sec));
-window.onload=function(){document.getElementById("loader").style.display="none";};
-document.getElementById("year").textContent=new Date().getFullYear();
 </script>
 
 </body>

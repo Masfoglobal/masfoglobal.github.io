@@ -3,18 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Masfo Global Connect Ltd | Global Technology & Innovation Company</title>
+<title>Masfo Global Connect Ltd | Building Africa’s Digital Future</title>
 
-<meta name="description" content="Masfo Global Connect Ltd is a global technology and innovation company delivering AI solutions, blockchain infrastructure, smart agriculture systems and digital trade platforms across Africa and global markets.">
+<meta name="description" content="Masfo Global Connect Ltd is a global technology and innovation company delivering AI, blockchain, smart agriculture and digital trade systems across Africa and global markets.">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
+
 body{
 font-family:'Poppins',sans-serif;
-background:#f4f6fb;
-color:#1f2937;
+background:#0B1B3A;
+color:#E5E7EB;
 line-height:1.8;
 }
 
@@ -22,40 +23,64 @@ nav{
 position:fixed;
 top:0;
 width:100%;
-background:white;
+background:#08152b;
 padding:18px 60px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-box-shadow:0 4px 20px rgba(0,0,0,0.05);
 z-index:1000;
 }
-nav .logo{
-font-weight:700;
-font-size:20px;
-color:#0B1B3A;
+
+nav img{
+height:40px;
 }
+
 nav a{
+color:#E5E7EB;
 text-decoration:none;
-color:#111;
 margin-left:25px;
 font-size:14px;
 }
-nav a:hover{color:#C81E3A;}
 
-header{
-padding:200px 20px 140px;
+nav a:hover{
+color:#C81E3A;
+}
+
+.hero{
+padding:220px 20px 140px;
 text-align:center;
 background:linear-gradient(135deg,#0B1B3A,#162a56,#C81E3A);
-color:white;
 }
-header h1{
-font-size:42px;
+
+.hero h1{
+font-size:48px;
+font-weight:800;
 margin-bottom:10px;
 }
-header p{
-margin-top:10px;
+
+.hero p{
 font-size:18px;
+opacity:0.9;
+margin-bottom:25px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 30px;
+border-radius:40px;
+text-decoration:none;
+font-weight:600;
+margin:10px;
+}
+
+.btn-primary{
+background:#C81E3A;
+color:white;
+}
+
+.btn-outline{
+border:2px solid white;
+color:white;
 }
 
 section{
@@ -65,33 +90,59 @@ margin:auto;
 }
 
 h2{
+font-size:30px;
 margin-bottom:30px;
-color:#0B1B3A;
-font-size:28px;
 text-align:center;
 }
 
 .card{
-background:white;
+background:#111F3D;
 padding:40px;
 border-radius:15px;
-box-shadow:0 10px 30px rgba(0,0,0,0.05);
 margin-bottom:30px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
 }
 
 ul{padding-left:20px;}
 
-footer{
-background:#0B1B3A;
+.leadership{
+display:flex;
+gap:40px;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.leadership img{
+width:250px;
+border-radius:15px;
+}
+
+.cta{
+background:#C81E3A;
+text-align:center;
+padding:100px 20px;
+}
+
+.cta h2{
 color:white;
+margin-bottom:25px;
+}
+
+footer{
+background:#08152b;
 text-align:center;
 padding:40px 20px;
-margin-top:60px;
 }
 
 @media(max-width:768px){
 nav{padding:15px 20px;}
-header h1{font-size:28px;}
+.hero h1{font-size:32px;}
+.leadership{flex-direction:column;text-align:center;}
 }
 </style>
 </head>
@@ -99,119 +150,49 @@ header h1{font-size:28px;}
 <body>
 
 <nav>
-<div class="logo">Masfo Global Connect Ltd</div>
+<img src="logo.jpg" alt="Masfo Logo">
 <div>
 <a href="#overview">Overview</a>
-<a href="#vision">Vision</a>
-<a href="#mission">Mission</a>
 <a href="#units">Units</a>
 <a href="#services">Services</a>
-<a href="#model">Business Model</a>
-<a href="#market">Target Market</a>
-<a href="#advantage">Advantage</a>
+<a href="#model">Model</a>
+<a href="#market">Market</a>
 <a href="#leadership">Leadership</a>
 <a href="#contact">Contact</a>
 </div>
 </nav>
 
-<header>
+<div class="hero">
 <h1>MASFO GLOBAL CONNECT LTD</h1>
 <p>Global Technology & Innovation Company</p>
 <p><strong>RC Number: 8158126</strong></p>
-<p>Registered Address:<br>
-No. 10, Dr Muh’d Plaza, Opp. Maiduguri Stadium,<br>
-Maiduguri, Borno State, Nigeria</p>
-<p>Phone: +234 9077 951 355<br>
-Email: info@masfoglobal.com</p>
-<p><strong>Building Africa’s Digital Future</strong></p>
-</header>
+<p>Building Africa’s Digital Future</p>
+<a href="#contact" class="btn btn-primary">Become Partner</a>
+<a href="#" class="btn btn-outline">Download Profile</a>
+</div>
 
 <section id="overview">
 <h2>Company Overview</h2>
 <div class="card">
-<p>Masfo Global Connect Ltd is a global technology and innovation company focused on developing advanced digital solutions, emerging technologies, and intelligent systems that support economic growth, smart agriculture, and cross-border digital commerce.</p>
-<p>The Company is committed to empowering individuals, businesses, and institutions through innovative technology, strategic partnerships, and scalable digital infrastructure designed for African and global markets.</p>
-</div>
-</section>
-
-<section id="vision">
-<h2>Vision</h2>
-<div class="card">
-To become a leading African technology and innovation company building intelligent digital solutions and sustainable systems that connect local opportunities to global markets.
-</div>
-</section>
-
-<section id="mission">
-<h2>Mission</h2>
-<div class="card">
-To deliver innovative, technology-driven solutions in artificial intelligence, software systems, blockchain infrastructure, smart agriculture, and digital trade while enabling capacity development, economic inclusion, and long-term value creation.
-</div>
-</section>
-
-<section>
-<h2>Core Values</h2>
-<div class="card">
-<ul>
-<li>Innovation</li>
-<li>Integrity</li>
-<li>Excellence</li>
-<li>Trust</li>
-<li>Collaboration</li>
-<li>Sustainability</li>
-</ul>
+Masfo Global Connect Ltd is a global technology and innovation company focused on developing advanced digital solutions, emerging technologies, and intelligent systems that support economic growth, smart agriculture, and cross-border digital commerce.
+<br><br>
+The Company is committed to empowering individuals, businesses, and institutions through innovative technology, strategic partnerships, and scalable digital infrastructure designed for African and global markets.
 </div>
 </section>
 
 <section id="units">
 <h2>Our Strategic Technology Units</h2>
-
-<div class="card">
-<strong>Masfo AI & Technology</strong><br><br>
-Focused on:
-<ul>
-<li>Software and web application development</li>
-<li>Artificial intelligence solutions</li>
-<li>Automation systems</li>
-<li>Digital platforms and enterprise tools</li>
-</ul>
+<div class="grid">
+<div class="card"><strong>Masfo AI & Technology</strong><br><br>Software and web application development, artificial intelligence solutions, automation systems and enterprise tools.</div>
+<div class="card"><strong>Masfo Blockchain Lab</strong><br><br>Blockchain advisory, smart contracts, digital trust infrastructure and Web3 research.</div>
+<div class="card"><strong>Masfo AgriTech</strong><br><br>Smart farming technologies, agri-data systems and sustainable production solutions.</div>
+<div class="card"><strong>Masfo Global Trade</strong><br><br>Cross-border digital commerce and African market access solutions.</div>
 </div>
-
-<div class="card">
-<strong>Masfo Blockchain Lab</strong>
-<ul>
-<li>Blockchain solutions and advisory</li>
-<li>Smart contract systems</li>
-<li>Digital trust infrastructure</li>
-<li>Web3 innovation research</li>
-</ul>
-</div>
-
-<div class="card">
-<strong>Masfo AgriTech</strong>
-<ul>
-<li>Smart farming technologies</li>
-<li>Agri-data and productivity systems</li>
-<li>Technology-driven agricultural solutions</li>
-<li>Sustainable food production support</li>
-</ul>
-</div>
-
-<div class="card">
-<strong>Masfo Global Trade</strong>
-<ul>
-<li>Cross-border business support</li>
-<li>Digital commerce enablement</li>
-<li>Sourcing and distribution partnerships</li>
-<li>Market access solutions for African products and services</li>
-</ul>
-</div>
-
 </section>
 
 <section id="services">
 <h2>Services & Solutions</h2>
 <div class="card">
-Masfo Global Connect Ltd provides:
 <ul>
 <li>Technology consulting and system design</li>
 <li>Software and platform development</li>
@@ -226,62 +207,44 @@ Masfo Global Connect Ltd provides:
 <section id="model">
 <h2>Business Model</h2>
 <div class="card">
-The Company operates a hybrid model combining:
-<ul>
-<li>Technology services</li>
-<li>Consulting</li>
-<li>Digital product development</li>
-<li>Training and capacity building</li>
-<li>Strategic partnerships and innovation programs</li>
-</ul>
+Hybrid structure combining technology services, consulting, product development, training and strategic innovation partnerships.
 </div>
 </section>
 
 <section id="market">
 <h2>Target Market</h2>
 <div class="card">
-<ul>
-<li>Startups and SMEs</li>
-<li>Government institutions</li>
-<li>Development organizations</li>
-<li>Agricultural sector stakeholders</li>
-<li>International technology and investment partners</li>
-</ul>
-</div>
-</section>
-
-<section id="advantage">
-<h2>Competitive Advantage</h2>
-<div class="card">
-<ul>
-<li>Integrated technology, agriculture, and trade expertise</li>
-<li>Innovation-driven business structure</li>
-<li>Scalable digital solutions</li>
-<li>Strong understanding of African emerging markets</li>
-<li>Vision for global collaboration and expansion</li>
-</ul>
+Startups & SMEs • Government institutions • Development organizations • Agricultural stakeholders • International investors
 </div>
 </section>
 
 <section id="leadership">
 <h2>Leadership</h2>
-<div class="card">
+<div class="card leadership">
+<img src="ceo.jpg" alt="CEO">
+<div>
 <strong>Abdulrahman Ali</strong><br>
 Founder & Chief Executive Officer (CEO)<br><br>
-Provides strategic direction for the Company’s innovation, technology development, and global partnership initiatives.
+Provides strategic direction for innovation, technology development and global partnership initiatives.
+</div>
 </div>
 </section>
 
 <section id="contact">
 <h2>Contact Information</h2>
 <div class="card">
-Masfo Global Connect Ltd<br>
+Masfo Global Connect Ltd<br><br>
 No. 10, Dr Muh’d Plaza, Opp. Maiduguri Stadium,<br>
 Maiduguri, Borno State, Nigeria<br><br>
 Phone: +234 9077 951 355<br>
 Email: info@masfoglobal.com
 </div>
 </section>
+
+<div class="cta">
+<h2>Become a Strategic Partner in Africa’s Digital Transformation</h2>
+<a href="mailto:info@masfoglobal.com" class="btn btn-outline">Start Partnership</a>
+</div>
 
 <footer>
 © 2026 Masfo Global Connect Ltd. All rights reserved.

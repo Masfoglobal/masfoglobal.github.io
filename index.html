@@ -32,8 +32,9 @@ z-index:1000;
 transition:0.4s ease;
 }
 
+nav img{height:48px;}
+
 .nav-left{flex:1;}
-.nav-left img{height:48px;}
 
 .nav-links{
 flex:1;
@@ -70,14 +71,10 @@ transform:translateY(-3px);
 box-shadow:0 8px 25px rgba(200,30,58,0.5);
 }
 
-.menu-toggle{
-display:none;
-font-size:32px;
-cursor:pointer;
-color:white;
-}
+.menu-toggle{display:none;font-size:32px;cursor:pointer;color:white;}
 
 .hero{padding:280px 20px 200px;text-align:center;}
+
 .hero h1{
 font-size:64px;
 font-weight:800;
@@ -86,6 +83,7 @@ background:linear-gradient(90deg,#ffffff,#C81E3A);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 }
+
 .hero p{font-size:20px;margin-bottom:16px;}
 
 .btn{
@@ -110,6 +108,7 @@ opacity:0;
 transform:translateY(80px);
 transition:1s ease;
 }
+
 section.show{opacity:1;transform:translateY(0);}
 
 h2{font-size:38px;margin-bottom:45px;text-align:center;}
@@ -128,6 +127,7 @@ footer{background:#08152b;text-align:center;padding:70px 20px;}
 @media(max-width:1000px){
 
 .menu-toggle{display:block;}
+
 .nav-right{display:none;}
 
 .nav-links{
@@ -150,6 +150,7 @@ margin:8px 0;
 font-size:15px;
 }
 
+/* Mobile Get Started */
 .nav-links .nav-cta{
 display:inline-block;
 width:80%;
@@ -187,6 +188,7 @@ section{padding:90px 20px;}
 <a href="#model">Model</a>
 <a href="#market">Market</a>
 <a href="#contact">Contact</a>
+<a href="#contact" class="nav-cta">Get Started</a>
 </div>
 
 <div class="nav-right">
@@ -209,19 +211,8 @@ function toggleMenu(){
 document.getElementById("navLinks").classList.toggle("active");
 }
 
-window.addEventListener("load",()=>{
+window.onload=function(){
 document.getElementById("loader").style.display="none";
-});
-
-window.addEventListener("scroll",()=>{
-let winScroll=document.documentElement.scrollTop;
-let height=document.documentElement.scrollHeight-document.documentElement.clientHeight;
-document.getElementById("progressBar").style.width=(winScroll/height)*100+"%";
-document.getElementById("topBtn").style.display=window.scrollY>500?"block":"none";
-});
-
-document.getElementById("topBtn").onclick=function(){
-window.scrollTo({top:0,behavior:'smooth'});
 };
 </script>
 

@@ -3,56 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Masfo Global Connect Ltd | Building Africa’s Digital Future</title>
-<meta name="description" content="Masfo Global Connect Ltd is a global technology and innovation company delivering AI, blockchain, smart agriculture and digital trade systems across Africa and global markets.">
 
+<link rel="icon" href="logo.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Poppins',sans-serif;background:#0B1B3A;color:#E5E7EB;line-height:1.8;}
 
-body{
-font-family:'Poppins',sans-serif;
-background:#0B1B3A;
-color:#E5E7EB;
-line-height:1.8;
-}
-
-/* NAV */
 nav{
 position:fixed;
 top:0;
 width:100%;
-padding:18px 50px;
+padding:20px 60px;
 display:flex;
-justify-content:space-between;
 align-items:center;
-background:rgba(8,21,43,0.9);
-backdrop-filter:blur(20px);
+background:rgba(8,21,43,0.95);
 z-index:1000;
-transition:0.4s;
 }
 
-nav.scrolled{
-background:#08152b;
-box-shadow:0 15px 40px rgba(0,0,0,0.7);
-}
-
-.logo{
-font-weight:700;
-font-size:18px;
-}
-
-.menu-toggle{
-display:none;
-font-size:28px;
-cursor:pointer;
-}
+.nav-left{flex:1;}
+.nav-left img{height:45px;}
 
 .nav-links{
+flex:1;
 display:flex;
-gap:25px;
+justify-content:center;
+gap:30px;
 }
 
 .nav-links a{
@@ -61,51 +39,55 @@ text-decoration:none;
 font-size:14px;
 }
 
-.hero{
-padding:200px 20px 150px;
-text-align:center;
-background:linear-gradient(135deg,#0B1B3A,#162a56,#C81E3A);
+.nav-right{
+flex:1;
+display:flex;
+justify-content:flex-end;
 }
 
-.hero h1{
-font-size:48px;
-font-weight:800;
-margin-bottom:15px;
+.nav-cta{
+background:#C81E3A;
+padding:10px 22px;
+border-radius:25px;
+text-decoration:none;
+color:white;
+font-weight:600;
+}
+
+.menu-toggle{
+display:none;
+font-size:28px;
+cursor:pointer;
+color:white;
+}
+
+.hero{
+padding-top:140px;
+text-align:center;
+padding-bottom:60px;
 }
 
 section{
+padding:60px 20px;
 max-width:1100px;
-margin:80px auto;
-padding:60px 30px;
-background:rgba(17,31,61,0.9);
-border-radius:25px;
-box-shadow:0 30px 80px rgba(0,0,0,0.7);
-opacity:0;
-transform:translateY(60px);
-transition:1s ease;
-}
-
-section.show{
-opacity:1;
-transform:translateY(0);
+margin:auto;
 }
 
 h2{
-margin-bottom:25px;
-font-size:30px;
-border-bottom:3px solid #C81E3A;
-display:inline-block;
-padding-bottom:8px;
+margin-bottom:20px;
+font-size:28px;
 }
 
-ul{margin-left:20px;}
-li{margin-bottom:6px;}
+ul{
+margin-top:10px;
+margin-left:20px;
+}
 
 footer{
-text-align:center;
-padding:50px 20px;
 background:#08152b;
-margin-top:80px;
+padding:40px 20px;
+text-align:center;
+margin-top:60px;
 }
 
 /* MOBILE */
@@ -115,20 +97,25 @@ margin-top:80px;
 
 .nav-links{
 position:fixed;
-top:70px;
+top:0;
 left:-100%;
-flex-direction:column;
-background:#08152b;
-width:230px;
+width:260px;
 height:100vh;
-padding:30px;
+background:#0B1B3A;
+flex-direction:column;
+padding-top:120px;
+padding-left:30px;
 transition:0.4s;
 }
 
 .nav-links.active{left:0;}
 
-.hero h1{font-size:28px;}
-section{margin:50px 15px;padding:40px 20px;}
+.nav-right{display:none;}
+
+.nav-links .nav-cta{
+margin-top:20px;
+display:inline-block;
+}
 
 }
 </style>
@@ -136,41 +123,43 @@ section{margin:50px 15px;padding:40px 20px;}
 
 <body>
 
-<nav id="navbar">
-<div class="logo">MASFO GLOBAL CONNECT LTD</div>
+<nav>
+<div class="nav-left">
+<img src="logo.jpg" alt="Masfo Logo">
+</div>
+
 <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
 <div class="nav-links" id="navLinks">
 <a href="#overview">Overview</a>
 <a href="#vision">Vision</a>
 <a href="#mission">Mission</a>
-<a href="#values">Core Values</a>
 <a href="#units">Units</a>
 <a href="#services">Services</a>
 <a href="#model">Model</a>
 <a href="#market">Market</a>
-<a href="#advantage">Advantage</a>
+<a href="#advantage">Competitive Advantage</a>
 <a href="#leadership">Leadership</a>
 <a href="#contact">Contact</a>
+<a href="#contact" class="nav-cta">Get Started</a>
 </div>
+
+<div class="nav-right">
+<a href="#contact" class="nav-cta">Get Started</a>
+</div>
+
 </nav>
 
 <div class="hero">
 <h1>MASFO GLOBAL CONNECT LTD</h1>
 <p>Global Technology & Innovation Company</p>
 <p><strong>RC Number: 8158126</strong></p>
-<p>Registered Address:<br>
-No. 10, Dr Muh’d Plaza, Opp. Maiduguri Stadium,<br>
-Maiduguri, Borno State, Nigeria</p>
-<p>Phone: +234 9077 951 355<br>
-Email: info@masfoglobal.com</p>
-<br>
 <p><strong>Building Africa’s Digital Future</strong></p>
 </div>
 
 <section id="overview">
 <h2>Company Overview</h2>
 <p>Masfo Global Connect Ltd is a global technology and innovation company focused on developing advanced digital solutions, emerging technologies, and intelligent systems that support economic growth, smart agriculture, and cross-border digital commerce.</p>
-<br>
 <p>The Company is committed to empowering individuals, businesses, and institutions through innovative technology, strategic partnerships, and scalable digital infrastructure designed for African and global markets.</p>
 </section>
 
@@ -184,22 +173,11 @@ Email: info@masfoglobal.com</p>
 <p>To deliver innovative, technology-driven solutions in artificial intelligence, software systems, blockchain infrastructure, smart agriculture, and digital trade while enabling capacity development, economic inclusion, and long-term value creation.</p>
 </section>
 
-<section id="values">
-<h2>Core Values</h2>
-<ul>
-<li>Innovation</li>
-<li>Integrity</li>
-<li>Excellence</li>
-<li>Trust</li>
-<li>Collaboration</li>
-<li>Sustainability</li>
-</ul>
-</section>
-
 <section id="units">
 <h2>Our Strategic Technology Units</h2>
 
 <h3>Masfo AI & Technology</h3>
+<p>Focused on:</p>
 <ul>
 <li>Software and web application development</li>
 <li>Artificial intelligence solutions</li>
@@ -230,10 +208,12 @@ Email: info@masfoglobal.com</p>
 <li>Sourcing and distribution partnerships</li>
 <li>Market access solutions for African products and services</li>
 </ul>
+
 </section>
 
 <section id="services">
 <h2>Services & Solutions</h2>
+<p>Masfo Global Connect Ltd provides:</p>
 <ul>
 <li>Technology consulting and system design</li>
 <li>Software and platform development</li>
@@ -246,6 +226,7 @@ Email: info@masfoglobal.com</p>
 
 <section id="model">
 <h2>Business Model</h2>
+<p>The Company operates a hybrid model combining:</p>
 <ul>
 <li>Technology services</li>
 <li>Consulting</li>
@@ -281,7 +262,6 @@ Email: info@masfoglobal.com</p>
 <h2>Leadership</h2>
 <p><strong>Abdulrahman Ali</strong><br>
 Founder & Chief Executive Officer (CEO)</p>
-<br>
 <p>Provides strategic direction for the Company’s innovation, technology development, and global partnership initiatives.</p>
 </section>
 
@@ -290,35 +270,18 @@ Founder & Chief Executive Officer (CEO)</p>
 <p>Masfo Global Connect Ltd<br>
 No. 10, Dr Muh’d Plaza, Opp. Maiduguri Stadium,<br>
 Maiduguri, Borno State, Nigeria</p>
-<br>
 <p>Phone: +234 9077 951 355<br>
 Email: info@masfoglobal.com</p>
 </section>
 
 <footer>
-© 2026 Masfo Global Connect Ltd. All rights reserved.
+© Masfo Global Connect Ltd. All rights reserved.
 </footer>
 
 <script>
 function toggleMenu(){
 document.getElementById("navLinks").classList.toggle("active");
 }
-
-window.addEventListener("scroll",()=>{
-document.getElementById("navbar").classList.toggle("scrolled",window.scrollY>50);
-});
-
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add("show");
-}
-});
-},{threshold:0.2});
-
-document.querySelectorAll("section").forEach(sec=>{
-observer.observe(sec);
-});
 </script>
 
 </body>

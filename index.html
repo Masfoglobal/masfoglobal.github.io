@@ -3,173 +3,95 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Masfo Global Connect Ltd | Building Africa’s Digital Future</title>
+<title>Masfo Global Connect Ltd | Global Technology & Innovation Company</title>
 
-<meta name="description" content="Masfo Global Connect Ltd is a global technology and innovation company delivering AI, blockchain, smart agriculture and digital trade systems across Africa and global markets.">
+<meta name="description" content="Masfo Global Connect Ltd is a global technology and innovation company delivering AI solutions, blockchain infrastructure, smart agriculture systems and digital trade platforms across Africa and global markets.">
 
-<link rel="icon" href="logo.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-html{scroll-behavior:smooth;}
+*{margin:0;padding:0;box-sizing:border-box;}
 body{
-margin:0;
-font-family:Segoe UI,Arial,sans-serif;
-background:#ffffff;
-color:#111827;
-line-height:1.7;
+font-family:'Poppins',sans-serif;
+background:#f4f6fb;
+color:#1f2937;
+line-height:1.8;
 }
 
-/* NAV */
 nav{
 position:fixed;
 top:0;
 width:100%;
-background:#ffffff;
-padding:18px 40px;
+background:white;
+padding:18px 60px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-box-shadow:0 2px 15px rgba(0,0,0,0.05);
+box-shadow:0 4px 20px rgba(0,0,0,0.05);
 z-index:1000;
-transition:0.3s ease;
 }
-
-nav.scrolled{
-box-shadow:0 8px 25px rgba(0,0,0,0.08);
-padding:14px 40px;
+nav .logo{
+font-weight:700;
+font-size:20px;
+color:#0B1B3A;
 }
-
 nav a{
 text-decoration:none;
 color:#111;
-margin-left:20px;
+margin-left:25px;
 font-size:14px;
-font-weight:500;
-transition:0.3s ease;
 }
 nav a:hover{color:#C81E3A;}
 
-/* HERO */
 header{
-padding:180px 20px 120px;
+padding:200px 20px 140px;
 text-align:center;
-background:linear-gradient(to right,#ffffff,#f9fafb);
+background:linear-gradient(135deg,#0B1B3A,#162a56,#C81E3A);
+color:white;
 }
 header h1{
 font-size:42px;
-max-width:900px;
-margin:auto;
-letter-spacing:-1px;
+margin-bottom:10px;
 }
 header p{
-margin-top:20px;
-color:#6b7280;
+margin-top:10px;
 font-size:18px;
 }
 
-.badge{
-display:inline-block;
-margin-top:20px;
-background:#C81E3A;
-color:white;
-padding:8px 18px;
-border-radius:30px;
-font-weight:bold;
-}
-
-.btn{
-display:inline-block;
-margin-top:30px;
-padding:14px 30px;
-border-radius:40px;
-text-decoration:none;
-font-weight:bold;
-margin-right:15px;
-transition:all 0.3s ease;
-}
-
-.btn-primary{
-background:#C81E3A;
-color:white;
-}
-
-.btn-outline{
-border:2px solid #C81E3A;
-color:#C81E3A;
-}
-
-.btn:hover{
-transform:translateY(-4px);
-box-shadow:0 10px 25px rgba(200,30,58,0.25);
-}
-
-.btn-outline:hover{
-background:#C81E3A;
-color:white;
-}
-
-/* SECTION */
 section{
 padding:100px 20px;
 max-width:1100px;
 margin:auto;
-opacity:0;
-transform:translateY(40px);
-transition:all 0.8s ease;
-}
-
-section.visible{
-opacity:1;
-transform:translateY(0);
 }
 
 h2{
+margin-bottom:30px;
+color:#0B1B3A;
+font-size:28px;
 text-align:center;
-margin-bottom:40px;
-font-size:30px;
-letter-spacing:-0.5px;
 }
 
 .card{
 background:white;
 padding:40px;
-border-radius:16px;
-box-shadow:0 10px 25px rgba(0,0,0,0.05);
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
 margin-bottom:30px;
-transition:all 0.4s ease;
-}
-
-.card:hover{
-transform:translateY(-6px);
-box-shadow:0 15px 35px rgba(0,0,0,0.08);
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
 }
 
 ul{padding-left:20px;}
 
 footer{
 background:#0B1B3A;
-color:#d1d5db;
+color:white;
 text-align:center;
 padding:40px 20px;
-margin-top:80px;
+margin-top:60px;
 }
 
-.whatsapp{
-position:fixed;
-bottom:25px;
-right:25px;
-background:#25D366;
-color:white;
-padding:14px 18px;
-border-radius:50px;
-text-decoration:none;
-box-shadow:0 8px 20px rgba(0,0,0,0.2);
+@media(max-width:768px){
+nav{padding:15px 20px;}
+header h1{font-size:28px;}
 }
 </style>
 </head>
@@ -177,15 +99,15 @@ box-shadow:0 8px 20px rgba(0,0,0,0.2);
 <body>
 
 <nav>
-<div style="font-weight:bold;font-size:18px;">Masfo Global Connect</div>
+<div class="logo">Masfo Global Connect Ltd</div>
 <div>
 <a href="#overview">Overview</a>
 <a href="#vision">Vision</a>
 <a href="#mission">Mission</a>
 <a href="#units">Units</a>
 <a href="#services">Services</a>
-<a href="#model">Model</a>
-<a href="#market">Market</a>
+<a href="#model">Business Model</a>
+<a href="#market">Target Market</a>
 <a href="#advantage">Advantage</a>
 <a href="#leadership">Leadership</a>
 <a href="#contact">Contact</a>
@@ -195,14 +117,14 @@ box-shadow:0 8px 20px rgba(0,0,0,0.2);
 <header>
 <h1>MASFO GLOBAL CONNECT LTD</h1>
 <p>Global Technology & Innovation Company</p>
-<div class="badge">RC Number: 8158126</div>
+<p><strong>RC Number: 8158126</strong></p>
+<p>Registered Address:<br>
+No. 10, Dr Muh’d Plaza, Opp. Maiduguri Stadium,<br>
+Maiduguri, Borno State, Nigeria</p>
+<p>Phone: +234 9077 951 355<br>
+Email: info@masfoglobal.com</p>
 <p><strong>Building Africa’s Digital Future</strong></p>
-
-<a href="#contact" class="btn btn-primary">Partner With Us</a>
-<a href="company-profile.pdf" class="btn btn-outline">Download Company Profile</a>
 </header>
-
-<!-- ALL YOUR ORIGINAL SECTIONS REMAIN EXACTLY THE SAME -->
 
 <section id="overview">
 <h2>Company Overview</h2>
@@ -228,13 +150,15 @@ To deliver innovative, technology-driven solutions in artificial intelligence, s
 
 <section>
 <h2>Core Values</h2>
-<div class="grid">
-<div class="card">Innovation</div>
-<div class="card">Integrity</div>
-<div class="card">Excellence</div>
-<div class="card">Trust</div>
-<div class="card">Collaboration</div>
-<div class="card">Sustainability</div>
+<div class="card">
+<ul>
+<li>Innovation</li>
+<li>Integrity</li>
+<li>Excellence</li>
+<li>Trust</li>
+<li>Collaboration</li>
+<li>Sustainability</li>
+</ul>
 </div>
 </section>
 
@@ -242,7 +166,8 @@ To deliver innovative, technology-driven solutions in artificial intelligence, s
 <h2>Our Strategic Technology Units</h2>
 
 <div class="card">
-<h3>Masfo AI & Technology</h3>
+<strong>Masfo AI & Technology</strong><br><br>
+Focused on:
 <ul>
 <li>Software and web application development</li>
 <li>Artificial intelligence solutions</li>
@@ -252,7 +177,7 @@ To deliver innovative, technology-driven solutions in artificial intelligence, s
 </div>
 
 <div class="card">
-<h3>Masfo Blockchain Lab</h3>
+<strong>Masfo Blockchain Lab</strong>
 <ul>
 <li>Blockchain solutions and advisory</li>
 <li>Smart contract systems</li>
@@ -262,7 +187,7 @@ To deliver innovative, technology-driven solutions in artificial intelligence, s
 </div>
 
 <div class="card">
-<h3>Masfo AgriTech</h3>
+<strong>Masfo AgriTech</strong>
 <ul>
 <li>Smart farming technologies</li>
 <li>Agri-data and productivity systems</li>
@@ -272,7 +197,7 @@ To deliver innovative, technology-driven solutions in artificial intelligence, s
 </div>
 
 <div class="card">
-<h3>Masfo Global Trade</h3>
+<strong>Masfo Global Trade</strong>
 <ul>
 <li>Cross-border business support</li>
 <li>Digital commerce enablement</li>
@@ -286,6 +211,7 @@ To deliver innovative, technology-driven solutions in artificial intelligence, s
 <section id="services">
 <h2>Services & Solutions</h2>
 <div class="card">
+Masfo Global Connect Ltd provides:
 <ul>
 <li>Technology consulting and system design</li>
 <li>Software and platform development</li>
@@ -300,6 +226,7 @@ To deliver innovative, technology-driven solutions in artificial intelligence, s
 <section id="model">
 <h2>Business Model</h2>
 <div class="card">
+The Company operates a hybrid model combining:
 <ul>
 <li>Technology services</li>
 <li>Consulting</li>
@@ -348,7 +275,7 @@ Provides strategic direction for the Company’s innovation, technology developm
 <section id="contact">
 <h2>Contact Information</h2>
 <div class="card">
-Masfo Global Connect Ltd<br><br>
+Masfo Global Connect Ltd<br>
 No. 10, Dr Muh’d Plaza, Opp. Maiduguri Stadium,<br>
 Maiduguri, Borno State, Nigeria<br><br>
 Phone: +234 9077 951 355<br>
@@ -357,32 +284,8 @@ Email: info@masfoglobal.com
 </section>
 
 <footer>
-©️ 2026 Masfo Global Connect Ltd. All rights reserved.
+© 2026 Masfo Global Connect Ltd. All rights reserved.
 </footer>
-
-<a class="whatsapp" href="https://wa.me/2349077951355" target="_blank">Chat</a>
-
-<script>
-const sections = document.querySelectorAll("section");
-
-window.addEventListener("scroll", () => {
-sections.forEach(section => {
-const rect = section.getBoundingClientRect();
-if(rect.top < window.innerHeight - 100){
-section.classList.add("visible");
-}
-});
-});
-
-window.addEventListener("scroll", function(){
-const nav = document.querySelector("nav");
-if(window.scrollY > 50){
-nav.classList.add("scrolled");
-}else{
-nav.classList.remove("scrolled");
-}
-});
-</script>
 
 </body>
 </html>

@@ -39,9 +39,10 @@ height:40px;
 /* HAMBURGER */
 .menu-toggle{
 display:none;
-font-size:28px;
+font-size:30px;
 cursor:pointer;
 color:white;
+z-index:1100;
 }
 
 .nav-links{
@@ -153,7 +154,7 @@ text-align:center;
 padding:40px 20px;
 }
 
-/* MOBILE MENU */
+/* ===== MODERN MOBILE MENU ===== */
 @media(max-width:900px){
 
 .menu-toggle{
@@ -164,17 +165,19 @@ display:block;
 position:fixed;
 top:0;
 right:-100%;
-height:100%;
-width:260px;
-background:#08152b;
+height:100vh;
+width:280px;
+background:#0B1B3A;
 flex-direction:column;
-padding-top:80px;
-transition:0.4s;
+padding-top:120px;
+padding-left:30px;
+transition:0.4s ease;
+box-shadow:-10px 0 30px rgba(0,0,0,0.6);
 }
 
 .nav-links a{
-margin:20px;
-font-size:16px;
+margin:20px 0;
+font-size:18px;
 }
 
 .nav-links.active{
@@ -189,6 +192,11 @@ font-size:32px;
 flex-direction:column;
 text-align:center;
 }
+}
+
+/* prevent scroll when menu open */
+body.menu-open{
+overflow:hidden;
 }
 </style>
 </head>
@@ -304,6 +312,7 @@ Email: info@masfoglobal.com
 <script>
 function toggleMenu(){
 document.getElementById("navLinks").classList.toggle("active");
+document.body.classList.toggle("menu-open");
 }
 </script>
 

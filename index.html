@@ -41,6 +41,31 @@ z-index:1000;
 transition:0.4s ease;
 }
 .nav-left{
+    flex:1;
+}
+
+.nav-links{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:35px;
+}
+
+.nav-right{
+    flex:1;
+    display:flex;
+    justify-content:flex-end;
+}
+
+.nav-cta{
+    background:#C81E3A;
+    color:white;
+    padding:10px 22px;
+    border-radius:30px;
+    font-weight:600;
+} 
+.nav-left{
 flex:1;
 }
 
@@ -57,10 +82,6 @@ flex:1;
 display:flex;
 justify-content:flex-end; /* button ya koma dama */
 }
-.nav-links{
-display:flex;
-gap:30px;   /* Wannan zai mayar da su tsakiya */
-}
 .nav-cta{
 margin-left:40px;
 background:#C81E3A;
@@ -73,14 +94,6 @@ transition:0.3s ease;
 .get-started-btn{
 margin-left:auto;
 }
- .nav-links{
-margin-left:80px;
-}
-
-.get-started-btn{
-margin-left:auto;
-} 
-.nav-cta:hover{
 transform:translateY(-3px);
 box-shadow:0 8px 25px rgba(200,30,58,0.5);
 }
@@ -103,6 +116,9 @@ h2{font-size:38px;margin-bottom:45px;text-align:center;}
 footer{background:#08152b;text-align:center;padding:70px 20px;}
 @media(max-width:1000px){
 .menu-toggle{display:block;}
+ .nav-right{
+    display:none;
+}
 .nav-links{
 position:fixed;
 top:100px;   /* ya fara kasa da navbar */
@@ -164,20 +180,6 @@ text-align:center;
 }
 .nav-links .nav-cta{
 width:75%;
-padding:10px 16px;
-font-size:13px;
-}
-.nav-right{
-display:none;
-} 
-body.menu-open{overflow:hidden;}
-</style>
-</head>
-
-<body>
-
-<div id="loader">MASFO LOADING...</div>
-<div id="progressBar"></div>
 <button id="topBtn">↑</button>
 
 <nav id="navbar">
@@ -193,10 +195,6 @@ body.menu-open{overflow:hidden;}
 <a href="#contact">Contact</a>
  </div>
  <div class="nav-right">
-<a href="#contact" class="nav-cta">Get Started</a>
-</div>
-</nav>
-
 <div class="hero">
 <h1>MASFO GLOBAL CONNECT LTD</h1>
 <p>Global Technology & Innovation Company</p>

@@ -19,7 +19,6 @@ color:#E5E7EB;
 line-height:1.8;
 }
 
-/* NAV */
 nav{
 position:fixed;
 top:0;
@@ -36,7 +35,6 @@ nav img{
 height:40px;
 }
 
-/* HAMBURGER */
 .menu-toggle{
 display:none;
 font-size:30px;
@@ -60,7 +58,6 @@ font-size:14px;
 color:#C81E3A;
 }
 
-/* HERO */
 .hero{
 padding:220px 20px 140px;
 text-align:center;
@@ -154,7 +151,6 @@ text-align:center;
 padding:40px 20px;
 }
 
-/* ===== MODERN MOBILE MENU (FROM LEFT) ===== */
 @media(max-width:900px){
 
 .menu-toggle{
@@ -184,7 +180,6 @@ font-size:18px;
 left:0;
 }
 
-/* ===== HERO MOBILE FIX ===== */
 .hero{
 padding:160px 20px 100px;
 }
@@ -205,13 +200,21 @@ font-size:14px;
 margin:8px;
 }
 
+/* SPACE FIX */
+section{
+padding:60px 20px;
+}
+
+.card{
+margin-bottom:20px;
+}
+
 .leadership{
 flex-direction:column;
 text-align:center;
 }
 }
 
-/* prevent scroll when menu open */
 body.menu-open{
 overflow:hidden;
 }
@@ -222,9 +225,7 @@ overflow:hidden;
 
 <nav>
 <img src="logo.jpg" alt="Masfo Logo">
-
 <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
 <div class="nav-links" id="navLinks">
 <a href="#overview">Overview</a>
 <a href="#units">Units</a>
@@ -244,8 +245,6 @@ overflow:hidden;
 <a href="#contact" class="btn btn-primary">Become Partner</a>
 <a href="#" class="btn btn-outline">Download Profile</a>
 </div>
-
-<!-- ALL YOUR CONTENT REMAINS EXACTLY SAME -->
 
 <section id="overview">
 <h2>Company Overview</h2>

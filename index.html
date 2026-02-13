@@ -31,9 +31,7 @@ align-items:center;
 z-index:1000;
 }
 
-nav img{
-height:40px;
-}
+nav img{height:40px;}
 
 .menu-toggle{
 display:none;
@@ -43,9 +41,7 @@ color:white;
 z-index:1100;
 }
 
-.nav-links{
-display:flex;
-}
+.nav-links{display:flex;}
 
 .nav-links a{
 color:#E5E7EB;
@@ -54,9 +50,7 @@ margin-left:25px;
 font-size:14px;
 }
 
-.nav-links a:hover{
-color:#C81E3A;
-}
+.nav-links a:hover{color:#C81E3A;}
 
 .hero{
 padding:220px 20px 140px;
@@ -64,17 +58,8 @@ text-align:center;
 background:linear-gradient(135deg,#0B1B3A,#162a56,#C81E3A);
 }
 
-.hero h1{
-font-size:48px;
-font-weight:800;
-margin-bottom:10px;
-}
-
-.hero p{
-font-size:18px;
-opacity:0.9;
-margin-bottom:25px;
-}
+.hero h1{font-size:48px;font-weight:800;margin-bottom:10px;}
+.hero p{font-size:18px;opacity:0.9;margin-bottom:10px;}
 
 .btn{
 display:inline-block;
@@ -85,15 +70,8 @@ font-weight:600;
 margin:10px;
 }
 
-.btn-primary{
-background:#C81E3A;
-color:white;
-}
-
-.btn-outline{
-border:2px solid white;
-color:white;
-}
+.btn-primary{background:#C81E3A;color:white;}
+.btn-outline{border:2px solid white;color:white;}
 
 section{
 padding:100px 20px;
@@ -114,36 +92,7 @@ border-radius:15px;
 margin-bottom:30px;
 }
 
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-}
-
 ul{padding-left:20px;}
-
-.leadership{
-display:flex;
-gap:40px;
-align-items:center;
-flex-wrap:wrap;
-}
-
-.leadership img{
-width:250px;
-border-radius:15px;
-}
-
-.cta{
-background:#C81E3A;
-text-align:center;
-padding:100px 20px;
-}
-
-.cta h2{
-color:white;
-margin-bottom:25px;
-}
 
 footer{
 background:#08152b;
@@ -153,9 +102,7 @@ padding:40px 20px;
 
 @media(max-width:900px){
 
-.menu-toggle{
-display:block;
-}
+.menu-toggle{display:block;}
 
 .nav-links{
 position:fixed;
@@ -171,53 +118,17 @@ transition:0.4s ease;
 box-shadow:10px 0 30px rgba(0,0,0,0.6);
 }
 
-.nav-links a{
-margin:20px 0;
-font-size:18px;
+.nav-links a{margin:20px 0;font-size:18px;}
+.nav-links.active{left:0;}
+
+.hero{padding:160px 20px 100px;}
+.hero h1{font-size:28px;line-height:1.3;}
+.hero p{font-size:15px;}
+
+section{padding:60px 20px;}
 }
 
-.nav-links.active{
-left:0;
-}
-
-.hero{
-padding:160px 20px 100px;
-}
-
-.hero h1{
-font-size:28px;
-line-height:1.3;
-letter-spacing:-0.5px;
-}
-
-.hero p{
-font-size:15px;
-}
-
-.btn{
-padding:12px 22px;
-font-size:14px;
-margin:8px;
-}
-
-/* SPACE FIX */
-section{
-padding:60px 20px;
-}
-
-.card{
-margin-bottom:20px;
-}
-
-.leadership{
-flex-direction:column;
-text-align:center;
-}
-}
-
-body.menu-open{
-overflow:hidden;
-}
+body.menu-open{overflow:hidden;}
 </style>
 </head>
 
@@ -228,6 +139,8 @@ overflow:hidden;
 <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 <div class="nav-links" id="navLinks">
 <a href="#overview">Overview</a>
+<a href="#vision">Vision</a>
+<a href="#mission">Mission</a>
 <a href="#units">Units</a>
 <a href="#services">Services</a>
 <a href="#model">Model</a>
@@ -241,7 +154,12 @@ overflow:hidden;
 <h1>MASFO GLOBAL CONNECT LTD</h1>
 <p>Global Technology & Innovation Company</p>
 <p><strong>RC Number: 8158126</strong></p>
-<p>Building Africa’s Digital Future</p>
+<p><strong>Registered Address:</strong><br>
+No. 10, Dr Muh’d Plaza, Opp. Maiduguri Stadium,<br>
+Maiduguri, Borno State, Nigeria</p>
+<p>Phone: +234 9077 951 355</p>
+<p>Email: info@masfoglobal.com</p>
+<p><strong>Building Africa’s Digital Future</strong></p>
 <a href="#contact" class="btn btn-primary">Become Partner</a>
 <a href="#" class="btn btn-outline">Download Profile</a>
 </div>
@@ -255,13 +173,68 @@ The Company is committed to empowering individuals, businesses, and institutions
 </div>
 </section>
 
+<section id="vision">
+<h2>Vision</h2>
+<div class="card">
+To become a leading African technology and innovation company building intelligent digital solutions and sustainable systems that connect local opportunities to global markets.
+</div>
+</section>
+
+<section id="mission">
+<h2>Mission</h2>
+<div class="card">
+To deliver innovative, technology-driven solutions in artificial intelligence, software systems, blockchain infrastructure, smart agriculture, and digital trade while enabling capacity development, economic inclusion, and long-term value creation.
+</div>
+</section>
+
+<section>
+<h2>Core Values</h2>
+<div class="card">
+<ul>
+<li>Innovation</li>
+<li>Integrity</li>
+<li>Excellence</li>
+<li>Trust</li>
+<li>Collaboration</li>
+<li>Sustainability</li>
+</ul>
+</div>
+</section>
+
 <section id="units">
 <h2>Our Strategic Technology Units</h2>
-<div class="grid">
-<div class="card"><strong>Masfo AI & Technology</strong><br><br>Software and web application development, artificial intelligence solutions, automation systems and enterprise tools.</div>
-<div class="card"><strong>Masfo Blockchain Lab</strong><br><br>Blockchain advisory, smart contracts, digital trust infrastructure and Web3 research.</div>
-<div class="card"><strong>Masfo AgriTech</strong><br><br>Smart farming technologies, agri-data systems and sustainable production solutions.</div>
-<div class="card"><strong>Masfo Global Trade</strong><br><br>Cross-border digital commerce and African market access solutions.</div>
+<div class="card">
+<strong>Masfo AI & Technology</strong>
+<ul>
+<li>Software and web application development</li>
+<li>Artificial intelligence solutions</li>
+<li>Automation systems</li>
+<li>Digital platforms and enterprise tools</li>
+</ul>
+
+<strong>Masfo Blockchain Lab</strong>
+<ul>
+<li>Blockchain solutions and advisory</li>
+<li>Smart contract systems</li>
+<li>Digital trust infrastructure</li>
+<li>Web3 innovation research</li>
+</ul>
+
+<strong>Masfo AgriTech</strong>
+<ul>
+<li>Smart farming technologies</li>
+<li>Agri-data and productivity systems</li>
+<li>Technology-driven agricultural solutions</li>
+<li>Sustainable food production support</li>
+</ul>
+
+<strong>Masfo Global Trade</strong>
+<ul>
+<li>Cross-border business support</li>
+<li>Digital commerce enablement</li>
+<li>Sourcing and distribution partnerships</li>
+<li>Market access solutions for African products and services</li>
+</ul>
 </div>
 </section>
 
@@ -282,26 +255,49 @@ The Company is committed to empowering individuals, businesses, and institutions
 <section id="model">
 <h2>Business Model</h2>
 <div class="card">
-Hybrid structure combining technology services, consulting, product development, training and strategic innovation partnerships.
+The Company operates a hybrid model combining:
+<ul>
+<li>Technology services</li>
+<li>Consulting</li>
+<li>Digital product development</li>
+<li>Training and capacity building</li>
+<li>Strategic partnerships and innovation programs</li>
+</ul>
 </div>
 </section>
 
 <section id="market">
 <h2>Target Market</h2>
 <div class="card">
-Startups & SMEs • Government institutions • Development organizations • Agricultural stakeholders • International investors
+<ul>
+<li>Startups and SMEs</li>
+<li>Government institutions</li>
+<li>Development organizations</li>
+<li>Agricultural sector stakeholders</li>
+<li>International technology and investment partners</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>Competitive Advantage</h2>
+<div class="card">
+<ul>
+<li>Integrated technology, agriculture, and trade expertise</li>
+<li>Innovation-driven business structure</li>
+<li>Scalable digital solutions</li>
+<li>Strong understanding of African emerging markets</li>
+<li>Vision for global collaboration and expansion</li>
+</ul>
 </div>
 </section>
 
 <section id="leadership">
 <h2>Leadership</h2>
-<div class="card leadership">
-<img src="ceo.jpg" alt="CEO">
-<div>
+<div class="card">
 <strong>Abdulrahman Ali</strong><br>
 Founder & Chief Executive Officer (CEO)<br><br>
-Provides strategic direction for innovation, technology development and global partnership initiatives.
-</div>
+Provides strategic direction for the Company’s innovation, technology development, and global partnership initiatives.
 </div>
 </section>
 
@@ -315,11 +311,6 @@ Phone: +234 9077 951 355<br>
 Email: info@masfoglobal.com
 </div>
 </section>
-
-<div class="cta">
-<h2>Become a Strategic Partner in Africa’s Digital Transformation</h2>
-<a href="mailto:info@masfoglobal.com" class="btn btn-outline">Start Partnership</a>
-</div>
 
 <footer>
 © 2026 Masfo Global Connect Ltd. All rights reserved.

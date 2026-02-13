@@ -8,26 +8,17 @@
 
 <meta name="description" content="Masfo Global Connect Ltd is a global technology and innovation company delivering AI, blockchain, smart agriculture and digital trade systems across Africa and global markets.">
 
-<meta name="keywords" content="Masfo, AI, Blockchain, AgriTech, Africa Tech, Digital Innovation, Smart Agriculture, Web3, African Startup">
-
-<meta property="og:title" content="Masfo Global Connect Ltd">
-<meta property="og:description" content="Building Africa’s Digital Future">
-<meta property="og:type" content="website">
-<meta property="og:image" content="logo.jpg">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Masfo Global Connect Ltd">
-<meta name="twitter:description" content="Building Africa’s Digital Future">
-
 <link rel="icon" href="logo.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
 body{font-family:'Poppins',sans-serif;background:#0B1B3A;color:#E5E7EB;line-height:1.8;overflow-x:hidden;}
+
 #progressBar{position:fixed;top:0;left:0;height:4px;background:#C81E3A;width:0%;z-index:2000;}
-#loader{position:fixed;width:100%;height:100vh;background:#0B1B3A;display:flex;align-items:center;justify-content:center;z-index:3000;font-weight:700;letter-spacing:2px;}
+#loader{position:fixed;width:100%;height:100vh;background:#0B1B3A;display:flex;align-items:center;justify-content:center;z-index:3000;font-weight:700;}
 #topBtn{position:fixed;bottom:30px;right:30px;background:#C81E3A;color:white;border:none;padding:12px 16px;border-radius:50%;cursor:pointer;display:none;z-index:1000;}
+
 nav{
 position:fixed;
 top:0;
@@ -40,35 +31,8 @@ backdrop-filter:blur(20px);
 z-index:1000;
 transition:0.4s ease;
 }
-.nav-left{
-    flex:1;
-}
 
-.nav-links{
-    flex:1;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:35px;
-}
-
-.nav-right{
-    flex:1;
-    display:flex;
-    justify-content:flex-end;
-}
-
-.nav-cta{
-    background:#C81E3A;
-    color:white;
-    padding:10px 22px;
-    border-radius:30px;
-    font-weight:600;
-} 
-.nav-left{
-flex:1;
-}
-
+.nav-left{flex:1;}
 .nav-links{
 flex:1;
 display:flex;
@@ -76,52 +40,88 @@ justify-content:center;
 align-items:center;
 gap:35px;
 }
-
+.nav-links a{
+color:#E5E7EB;
+text-decoration:none;
+font-size:14px;
+}
 .nav-right{
 flex:1;
 display:flex;
-justify-content:flex-end; /* button ya koma dama */
+justify-content:flex-end;
 }
 .nav-cta{
-margin-left:40px;
 background:#C81E3A;
 color:white;
 padding:10px 22px;
 border-radius:30px;
 font-weight:600;
+text-decoration:none;
 transition:0.3s ease;
 }
-.get-started-btn{
-margin-left:auto;
-}
+.nav-cta:hover{
 transform:translateY(-3px);
 box-shadow:0 8px 25px rgba(200,30,58,0.5);
 }
 nav.scrolled{background:#08152b;box-shadow:0 12px 40px rgba(0,0,0,0.7);}
 nav img{height:48px;}
+
 .menu-toggle{display:none;font-size:32px;cursor:pointer;color:white;}
-.nav-links{display:flex;}
-.nav-links a{color:#E5E7EB;text-decoration:none;margin-left:36px;font-size:14px;}
+
 .hero{padding:280px 20px 200px;text-align:center;}
-.hero h1{font-size:64px;font-weight:800;margin-bottom:20px;background:linear-gradient(90deg,#ffffff,#C81E3A);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.hero h1{
+font-size:64px;
+font-weight:800;
+margin-bottom:20px;
+background:linear-gradient(90deg,#ffffff,#C81E3A);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
 .hero p{font-size:20px;margin-bottom:16px;}
-.btn{display:inline-block;padding:18px 42px;border-radius:60px;text-decoration:none;font-weight:600;margin:16px;transition:0.4s ease;}
+
+.btn{
+display:inline-block;
+padding:18px 42px;
+border-radius:60px;
+text-decoration:none;
+font-weight:600;
+margin:16px;
+transition:0.4s ease;
+}
 .btn-primary{background:#C81E3A;color:white;box-shadow:0 15px 40px rgba(200,30,58,0.6);}
 .btn-outline{border:2px solid white;color:white;}
 .btn:hover{transform:translateY(-6px);}
-section{padding:60px 20px;max-width:1250px;margin:auto;opacity:0;transform:translateY(80px);transition:1s ease;}
-section.show{opacity:1;transform:translateY(0);}
-h2{font-size:38px;margin-bottom:45px;text-align:center;}
-.card{background:rgba(17,31,61,0.75);padding:65px;border-radius:28px;margin-bottom:55px;box-shadow:0 30px 80px rgba(0,0,0,0.7);}
-footer{background:#08152b;text-align:center;padding:70px 20px;}
-@media(max-width:1000px){
-.menu-toggle{display:block;}
- .nav-right{
-    display:none;
+
+section{
+padding:60px 20px;
+max-width:1250px;
+margin:auto;
+opacity:0;
+transform:translateY(80px);
+transition:1s ease;
 }
+section.show{opacity:1;transform:translateY(0);}
+
+h2{font-size:38px;margin-bottom:45px;text-align:center;}
+.card{
+background:rgba(17,31,61,0.75);
+padding:65px;
+border-radius:28px;
+margin-bottom:55px;
+box-shadow:0 30px 80px rgba(0,0,0,0.7);
+}
+
+footer{background:#08152b;text-align:center;padding:70px 20px;}
+
+/* MOBILE */
+@media(max-width:1000px){
+
+.menu-toggle{display:block;}
+.nav-right{display:none;}
+
 .nav-links{
 position:fixed;
-top:100px;   /* ya fara kasa da navbar */
+top:100px;
 left:-100%;
 height:calc(100vh - 100px);
 width:240px;
@@ -131,60 +131,44 @@ padding-top:25px;
 padding-left:20px;
 transition:0.4s ease;
 }
-.nav-cta{
-background:#C81E3A;
-color:white !important;
-padding:10px 22px;
-border-radius:30px;
-margin-left:30px;
-transition:0.3s ease;
-}
 
-.nav-cta:hover{
-transform:translateY(-3px);
-box-shadow:0 8px 20px rgba(200,30,58,0.4);
-}
 .nav-links.active{left:0;}
-.hero{padding:190px 20px 120px;}
-.hero h1{font-size:34px;}
-section{padding:90px 20px;}
+
 .nav-links a{
 margin:8px 0;
 font-size:15px;
 }
-.nav-cta{
+
+.nav-links .nav-cta{
+display:inline-block;
+width:80%;
 margin-top:20px;
-display:inline-block;
-}
-.nav-links .btn{
-display:block;
-width:100%;
-max-width:180px;
-margin:18px auto 0 auto;
-text-align:center;
-padding:12px 0;
-border-radius:40px;
-}
-.nav-links{
-box-sizing:border-box;
-}
-/* Mobile Get Started Button */
-.nav-links .nav-cta{
-display:inline-block;
-width:85%;
-margin-top:25px;
-padding:12px 18px;
-font-size:14px;
-border-radius:25px;
 text-align:center;
 }
-.nav-links .nav-cta{
-width:75%;
+
+.hero{padding:190px 20px 120px;}
+.hero h1{font-size:34px;}
+section{padding:90px 20px;}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="loader">MASFO LOADING...</div>
+<div id="progressBar"></div>
 <button id="topBtn">↑</button>
 
 <nav id="navbar">
+
+<div class="nav-left">
 <img src="logo.jpg" alt="Masfo Logo">
+</div>
+
 <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
 <div class="nav-links" id="navLinks">
 <a href="#overview">Overview</a>
 <a href="#vision">Vision</a>
@@ -193,8 +177,15 @@ width:75%;
 <a href="#model">Model</a>
 <a href="#market">Market</a>
 <a href="#contact">Contact</a>
- </div>
- <div class="nav-right">
+<a href="#contact" class="nav-cta">Get Started</a>
+</div>
+
+<div class="nav-right">
+<a href="#contact" class="nav-cta">Get Started</a>
+</div>
+
+</nav>
+
 <div class="hero">
 <h1>MASFO GLOBAL CONNECT LTD</h1>
 <p>Global Technology & Innovation Company</p>
@@ -203,163 +194,3 @@ width:75%;
 <a href="#contact" class="btn btn-primary">Become Partner</a>
 <a href="#" class="btn btn-outline">Download Profile</a>
 </div>
-
-<section id="overview">
-<h2>Company Overview</h2>
-<div class="card">
-Masfo Global Connect Ltd is a global technology and innovation company focused on developing advanced digital solutions, emerging technologies, and intelligent systems that support economic growth, smart agriculture, and cross-border digital commerce.<br><br>
-The Company is committed to empowering individuals, businesses, and institutions through innovative technology, strategic partnerships, and scalable digital infrastructure designed for African and global markets.
-</div>
-</section>
-
-<section id="vision">
-<h2>Vision</h2>
-<div class="card">
-To become a leading African technology and innovation company building intelligent digital solutions and sustainable systems that connect local opportunities to global markets.
-</div>
-</section>
-
-<section id="mission">
-<h2>Mission</h2>
-<div class="card">
-To deliver innovative, technology-driven solutions in artificial intelligence, software systems, blockchain infrastructure, smart agriculture, and digital trade while enabling capacity development, economic inclusion, and long-term value creation.
-</div>
-</section>
-
-<section id="units">
-<h2>Our Strategic Technology Units</h2>
-<div class="card">
-<strong>Masfo AI & Technology</strong><br><br>
-Focused on:
-<ul>
-<li>Software and web application development</li>
-<li>Artificial intelligence solutions</li>
-<li>Automation systems</li>
-<li>Digital platforms and enterprise tools</li>
-</ul>
-<strong>Masfo Blockchain Lab</strong>
-<ul>
-<li>Blockchain solutions and advisory</li>
-<li>Smart contract systems</li>
-<li>Digital trust infrastructure</li>
-<li>Web3 innovation research</li>
-</ul>
-<strong>Masfo AgriTech</strong>
-<ul>
-<li>Smart farming technologies</li>
-<li>Agri-data and productivity systems</li>
-<li>Technology-driven agricultural solutions</li>
-<li>Sustainable food production support</li>
-</ul>
-<strong>Masfo Global Trade</strong>
-<ul>
-<li>Cross-border business support</li>
-<li>Digital commerce enablement</li>
-<li>Sourcing and distribution partnerships</li>
-<li>Market access solutions for African products and services</li>
-</ul>
-</div>
-</section>
-
-<section id="services">
-<h2>Services & Solutions</h2>
-<div class="card">
-Masfo Global Connect Ltd provides:
-<ul>
-<li>Technology consulting and system design</li>
-<li>Software and platform development</li>
-<li>AI-enabled business solutions</li>
-<li>Digital transformation support</li>
-<li>Capacity building and technology training</li>
-<li>Innovation and research partnerships</li>
-</ul>
-</div>
-</section>
-
-<section id="model">
-<h2>Business Model</h2>
-<div class="card">
-The Company operates a hybrid model combining:
-<ul>
-<li>Technology services</li>
-<li>Consulting</li>
-<li>Digital product development</li>
-<li>Training and capacity building</li>
-<li>Strategic partnerships and innovation programs</li>
-</ul>
-</div>
-</section>
-
-<section id="market">
-<h2>Target Market</h2>
-<div class="card">
-<ul>
-<li>Startups and SMEs</li>
-<li>Government institutions</li>
-<li>Development organizations</li>
-<li>Agricultural sector stakeholders</li>
-<li>International technology and investment partners</li>
-</ul>
-</div>
-</section>
-
-<section id="advantage">
-<h2>Competitive Advantage</h2>
-<div class="card">
-<ul>
-<li>Integrated technology, agriculture, and trade expertise</li>
-<li>Innovation-driven business structure</li>
-<li>Scalable digital solutions</li>
-<li>Strong understanding of African emerging markets</li>
-<li>Vision for global collaboration and expansion</li>
-</ul>
-</div>
-</section>
-
-<section id="leadership">
-<h2>Leadership</h2>
-<div class="card">
-Abdulrahman Ali<br>
-Founder & Chief Executive Officer (CEO)<br><br>
-Provides strategic direction for the Company’s innovation, technology development, and global partnership initiatives.
-</div>
-</section>
-
-<section id="contact">
-<h2>Contact Information</h2>
-<div class="card">
-Masfo Global Connect Ltd<br>
-No. 10, Dr Muh’d Plaza, Opp. Maiduguri Stadium,<br>
-Maiduguri, Borno State, Nigeria<br><br>
-Phone: +234 9077 951 355<br>
-Email: info@masfoglobal.com
-</div>
-</section>
-
-<footer>
-© <span id="year"></span> Masfo Global Connect Ltd. All rights reserved.
-</footer>
-
-<script>
-function toggleMenu(){
-document.getElementById("navLinks").classList.toggle("active");
-document.body.classList.toggle("menu-open");
-}
-window.addEventListener("scroll",()=>{
-let winScroll=document.documentElement.scrollTop;
-let height=document.documentElement.scrollHeight-document.documentElement.clientHeight;
-document.getElementById("progressBar").style.width=(winScroll/height)*100+"%";
-document.getElementById("navbar").classList.toggle("scrolled",window.scrollY>60);
-document.getElementById("topBtn").style.display=window.scrollY>500?"block":"none";
-});
-document.getElementById("topBtn").onclick=function(){window.scrollTo({top:0,behavior:'smooth'});};
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("show");}});
-},{threshold:0.15});
-document.querySelectorAll("section").forEach(sec=>observer.observe(sec));
-window.onload=function(){document.getElementById("loader").style.display="none";};
-document.getElementById("year").textContent=new Date().getFullYear();
-</script>
-
-</body>
-</html>

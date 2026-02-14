@@ -550,13 +550,15 @@ function closeMenu(){
     document.getElementById("navLinks").classList.remove("active");
     document.getElementById("overlay").classList.remove("active");   
 }
-// Always start from top when page loads
-window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-};
+// FORCE START FROM TOP (Desktop + Mobile)
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
 
 window.addEventListener("load", function () {
-    window.scrollTo(0, 0);
+    setTimeout(function(){
+        window.scrollTo(0,0);
+    }, 0);
 });
 
 document.addEventListener("click", function(e){

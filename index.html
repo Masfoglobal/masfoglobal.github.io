@@ -198,7 +198,7 @@ font-size:14px;
     left: 0;
     width: 100%;
     height: calc(100vh - 70px);
-    background: rgba(0,0,0,0.3);
+    background: rgba(0,0,0,0.15);
     display: none;
     z-index: 500;
 }
@@ -469,8 +469,20 @@ function toggleMenu(){
 
 function closeMenu(){
     document.getElementById("navLinks").classList.remove("active");
-    document.getElementById("overlay").classList.remove("active");
+    document.getElementById("overlay").classList.remove("active");   
 }
+document.addEventListener("click", function(e){
+    const nav = document.getElementById("navLinks");
+    const overlay = document.getElementById("overlay");
+    const menuBtn = document.querySelector(".menu-toggle");
+
+    if(nav.classList.contains("active") &&
+       !nav.contains(e.target) &&
+       !menuBtn.contains(e.target)){
+        nav.classList.remove("active");
+        overlay.classList.remove("active");
+    }
+});
 const observer=new IntersectionObserver(entries=>{
 entries.forEach(entry=>{
 if(entry.isIntersecting){

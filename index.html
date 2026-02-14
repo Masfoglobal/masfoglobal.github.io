@@ -200,17 +200,17 @@ font-size:14px;
 }
 
 .nav-links{
-    position:fixed;
-    top:70;
-    left:-100%;
-    height:100vh;
-    width:240px; /* rage shi */
-    background:#08152b;
-    display:flex;
-    flex-direction:column;
-    padding:90px 25px 30px 25px; /* daidaitaccen spacing */
-    transition:0.3s ease;
-    z-index:1000;
+    position: fixed;
+    top: 70px; /* ya fara bayan navbar */
+    left: -100%;
+    height: calc(100vh - 70px);
+    width: 240px;
+    background: #08152b;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 25px;
+    transition: 0.3s ease;
+    z-index: 999;
 }
 .nav-links a{
     display:block;

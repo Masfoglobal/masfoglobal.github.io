@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://masfoglobal.com/sitemap.xml

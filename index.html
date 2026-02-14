@@ -326,7 +326,32 @@ transition:var(--transition);
 .desktop-cta-btn:hover{
 transform:scale(1.05);
 }
+.footer-social{
+display:flex;
+justify-content:center;
+gap:18px;
+margin-bottom:25px;
+}
 
+.footer-social a{
+width:42px;
+height:42px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+background:rgba(255,255,255,0.08);
+color:white;
+font-size:16px;
+transition:0.3s ease;
+backdrop-filter:blur(10px);
+}
+
+.footer-social a:hover{
+background:var(--primary);
+transform:translateY(-6px);
+box-shadow:0 12px 30px rgba(200,30,58,0.5);
+}
 /* ============================= */
 /* RESPONSIVE */
 /* ============================= */
@@ -422,7 +447,7 @@ section{
 </script>
 
 </head>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <body>
 
 <div id="progressBar"></div>
@@ -587,7 +612,18 @@ Email: info@masfoglobal.com
 <!-- (Your entire section content remains untouched — omitted here only for message length, but you will keep them exactly as you sent earlier) -->
 
 <footer>
-© <span id="year"></span> Masfo Global Connect Ltd. All rights reserved.
+
+<div class="footer-social">
+<a href="https://facebook.com/Masfoglobal" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a href="https://twitter.com/Masfoglobal" target="_blank"><i class="fab fa-x-twitter"></i></a>
+<a href="https://instagram.com/Masfoglobal" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://linkedin.com/in/Masfoglobal" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+<a href="https://t.me/Masfoglobal" target="_blank"><i class="fab fa-telegram"></i></a>
+<a href="https://wa.me/2349077951355" target="_blank"><i class="fab fa-whatsapp"></i></a>
+</div>
+
+<p>© 2026 Masfo Global Connect Ltd. All Rights Reserved.</p>
+
 </footer>
 
 <script>

@@ -550,17 +550,27 @@ function closeMenu(){
     document.getElementById("navLinks").classList.remove("active");
     document.getElementById("overlay").classList.remove("active");   
 }
-// FORCE START FROM TOP (Desktop + Mobile)
+// Disable browser scroll restore (VERY IMPORTANT)
 if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
 }
+// REMOVE hash from URL on load (VERY IMPORTANT)
+if (window.location.hash) {
+    history.replaceState("", document.title, window.location.pathname);
+}
 
-window.addEventListener("load", function () {
-    setTimeout(function(){
-        window.scrollTo(0,0);
-    }, 0);
+// Force scroll to top immediately
+window.scrollTo(0, 0);
+
+// Also run when DOM is ready
+document.addEventListener("DOMContentLoaded", function () {
+    window.scrollTo(0, 0);
 });
 
+// Extra force for mobile Safari / Chrome
+setTimeout(function () {
+    window.scrollTo(0, 0);
+}, 10);
 document.addEventListener("click", function(e){
     const nav = document.getElementById("navLinks");
     const overlay = document.getElementById("overlay");

@@ -205,10 +205,21 @@ font-size:14px;
 .overlay.active{
     display: block;
 }
+.desktop-cta-btn{
+    background:#e91e3a;
+    color:white;
+    padding:10px 25px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
+}
     
 html {
     scroll-behavior: smooth;
 }
+.mobile-cta-btn{
+    display:none;
+}    
     
 @media(max-width:1000px){
 nav{
@@ -279,6 +290,9 @@ section{
 .mobile-cta-btn{
     box-shadow:0 0 20px rgba(233,30,58,0.6);
 }
+.desktop-cta-btn{
+    display:none;
+}   
 </style>
 
 <!-- STRUCTURED DATA -->
@@ -317,6 +331,9 @@ section{
 <a href="#contact">Contact</a>
 <a href="#contact" class="mobile-cta-btn">Get Started</a>
 </div>
+<a href="#contact" class="desktop-cta-btn">Get Started</a>
+
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>    
 </nav>
     
 <div class="hero">

@@ -64,25 +64,31 @@ top:0;
 width:100%;
 padding:22px 80px;
 display:flex;
-justify-content:space-between;
 align-items:center;
 background:rgba(8,21,43,0.6);
 backdrop-filter:blur(20px);
 z-index:1000;
 transition:var(--transition);
 }
+nav img{
+   margin-right:auto;
+}
 
+.nav-links{
+   display:flex;
+   gap:30px;
+   margin:0 auto;
+}
+
+.desktop-cta-btn{
+   margin-left:auto;
+}
 nav.scrolled{
 background:#08152b;
 box-shadow:0 12px 40px rgba(0,0,0,0.7);
 }
 
 nav img{height:48px;}
-
-.nav-links{
-display:flex;
-gap:30px;
-}
 
 .nav-links a{
 color:var(--text);

@@ -59,21 +59,22 @@ z-index:2000;
 }
 
 nav{
-position:fixed;
-top:0;
-width:100%;
-padding:22px 80px;
-display:flex;
-align-items:center;
-background:rgba(8,21,43,0.6);
-backdrop-filter:blur(20px);
-z-index:1000;
-transition:var(--transition);
-}
-nav img{
-   margin-right:40px;
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:22px 80px;
+    display:flex;
+    align-items:center;
+    background:rgba(8,21,43,0.6);
+    backdrop-filter:blur(20px);
+    z-index:1000;
 }
 
+nav img{
+    height:48px;
+}
+
+/* LINKS CENTER */
 .nav-links{
     display:flex;
     gap:30px;
@@ -91,11 +92,12 @@ box-shadow:0 12px 40px rgba(0,0,0,0.7);
 
 nav img{height:48px;}
 
+/* LINK STYLE */
 .nav-links a{
-color:var(--text);
-text-decoration:none;
-font-size:14px;
-position:relative;
+    color:var(--text);
+    text-decoration:none;
+    font-size:14px;
+    position:relative;
 }
 
 .nav-links a::after{
@@ -212,6 +214,7 @@ font-size:14px;
 .overlay.active{
     display: block;
 }
+/* GET STARTED RIGHT */
 .cta-btn{
     background:#e91e3a;
     color:white;
@@ -219,15 +222,15 @@ font-size:14px;
     border-radius:30px;
     text-decoration:none;
     font-weight:600;
-    margin-left:auto;
 }
     
 html {
     scroll-behavior: smooth;
+}
+
 .desktop-cta-btn{
     margin-left:auto;
-}   
-    
+}
 @media(max-width:1000px){
 nav{
     position: fixed;

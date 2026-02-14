@@ -200,7 +200,7 @@ font-size:14px;
     height: calc(100vh - 70px);
     background: rgba(0,0,0,0.15);
     display: none;
-    z-index: 400;
+    z-index: 300;
 }
 .overlay.active{
     display: block;
@@ -448,28 +448,15 @@ Email: info@masfoglobal.com
 
 <script>
 document.querySelectorAll(".nav-links a").forEach(link => {
-    link.addEventListener("click", function(e){
+    link.addEventListener("click", function(){
 
-        const targetId = this.getAttribute("href");
-        const target = document.querySelector(targetId);
-
-        if(target){
-            e.preventDefault();
-
-            // rufe menu
-            document.getElementById("navLinks").classList.remove("active");
-            document.getElementById("overlay").classList.remove("active");
-
-            // jira kadan kafin scroll (important a mobile)
-            setTimeout(() => {
-                target.scrollIntoView({
-                    behavior: "smooth"
-                });
-            }, 200);
-        }
+        // rufe menu kawai
+        document.getElementById("navLinks").classList.remove("active");
+        document.getElementById("overlay").classList.remove("active");
 
     });
 });
+    
 function toggleMenu(){
     document.getElementById("navLinks").classList.toggle("active");
     document.getElementById("overlay").classList.toggle("active");

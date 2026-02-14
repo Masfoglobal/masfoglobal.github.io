@@ -194,30 +194,36 @@ font-size:14px;
 }
     
 @media(max-width:1000px){
+.nav-links{
+    position: fixed;
+    top: 70px; /* ya fara bayan navbar */
+    left: -100%;
+    height: calc(100vh - 70px);
+    width: 240px;
+    background: #08152b;
 
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;   /* CENTER TSAYE */
+    align-items: flex-start;   /* links su fara daga hagu */
+
+    padding: 0 25px; /* cire padding na sama */
+    transition: 0.3s ease;
+    z-index: 998; /* kasa da navbar */
+}
+    
 .menu-toggle{
     display:block;
 }
-
-.nav-links{
-    position: fixed;
-    top: 60px; /* ya fara bayan navbar */
-    left: -100%;
-    height: calc(100vh - 60px);
-    width: 240px;
-    background: #08152b;
-    display: flex;
-    flex-direction: column;
-    padding: 20px 25px;
-    transition: 0.3s ease;
-    z-index: 999;
-}
 .nav-links a{
     display:block;
-    padding:12px 0;
-    font-size:15px;
+    padding:14px 0;
+    font-size:16px;
     font-weight:400;
     letter-spacing:0.3px;
+    position: relative;
+    z-index: 1000; /* ya fi menu */
 }
 
 .nav-links.active{
